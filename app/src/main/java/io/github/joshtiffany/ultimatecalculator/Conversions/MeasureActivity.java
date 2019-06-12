@@ -10,23 +10,37 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import javax.measure.Measure;
+import javax.measure.converter.UnitConverter;
+import javax.measure.quantity.Length;
+
+import static javax.measure.unit.NonSI.*;
+import static javax.measure.unit.SI.*;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class MeasureActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemSelectedListener {
 
     private Button calc;
     private Spinner infospinner;
     private Spinner resultspinner;
     private EditText info;
     private TextView result;
+    private Integer measurement;
+    private Double val1;
+    private UnitConverter ut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +56,45 @@ public class MeasureActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
         uiSetup();
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.measurements1, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        infospinner.setAdapter(adapter);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
+                R.array.measurements2, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        resultspinner.setAdapter(adapter2);
+
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (info.getText().length() > 0) {
+                    if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = INCH.getConverterTo(FOOT);
+                        val1 = ut.convert(Measure.valueOf(val1,FOOT).doubleValue(FOOT));
+                        result.setText(String.valueOf(val1));
+                    }
+
+
+                }
+
+            }
+        });
+
+    }
+
+
+    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+
+    }
+
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
     public void uiSetup() {
-        calc = findViewById(R.id.calc);
+        calc = findViewById(R.id.measureCalcBTN);
         resultspinner = findViewById(R.id.resultSpinner);
         infospinner = findViewById(R.id.infoSpinner);
         info = findViewById(R.id.measureInfoTV);

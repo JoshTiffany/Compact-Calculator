@@ -28,4 +28,17 @@
     <string name="Calculators">Calculators</string>
     <string name="title_activity_temp">TempActivity</string>
     <string name="title_activity_measure">MeasureActivity</string>
+
+    <string-array name="measurements1">
+        <item>Inches</item>
+        <item>Feet</item>
+        <item>Yard</item>
+        <item>Mile</item>
+    </string-array>
+    <string-array name="measurements2">
+        <item>Inches</item>
+        <item>Feet</item>
+        <item>Yard</item>
+        <item>Mile</item>
+    </string-array>
 </resources>
