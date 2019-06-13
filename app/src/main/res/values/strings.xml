@@ -34,11 +34,21 @@
         <item>Feet</item>
         <item>Yard</item>
         <item>Mile</item>
+        <item>N-Mile</item>
+        <item>Millimeter</item>
+        <item>Centimeter</item>
+        <item>Meter</item>
+        <item>Kilometer</item>
     </string-array>
     <string-array name="measurements2">
         <item>Inches</item>
         <item>Feet</item>
         <item>Yard</item>
         <item>Mile</item>
+        <item>N-Mile</item>
+        <item>Millimeter</item>
+        <item>Centimeter</item>
+        <item>Meter</item>
+        <item>Kilometer</item>
     </string-array>
 </resources>
