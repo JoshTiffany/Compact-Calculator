@@ -43,7 +43,6 @@ public class MeasureActivity extends AppCompatActivity
     private Spinner resultspinner;
     private EditText info;
     private TextView result;
-    private Integer measurement;
     private Double val1;
     private UnitConverter ut;
 
@@ -150,6 +149,29 @@ public class MeasureActivity extends AppCompatActivity
                         val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
                         result.setText(String.valueOf(val1));
 
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = FOOT.getConverterTo(MILLIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE).doubleValue(MILLIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = FOOT.getConverterTo(CENTIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CENTIMETRE).doubleValue(CENTIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 7) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = FOOT.getConverterTo(METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, METRE).doubleValue(METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 8) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = FOOT.getConverterTo(KILOMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
+                        result.setText(String.valueOf(val1));
                     }
                     // Yards to...
                     if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 0) {
@@ -176,81 +198,327 @@ public class MeasureActivity extends AppCompatActivity
                         val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
                         result.setText(String.valueOf(val1));
 
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = YARD.getConverterTo(MILLIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE).doubleValue(MILLIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = YARD.getConverterTo(CENTIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CENTIMETRE).doubleValue(CENTIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 7) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = YARD.getConverterTo(METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, METRE).doubleValue(METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 8) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = YARD.getConverterTo(KILOMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
+                        result.setText(String.valueOf(val1));
+
                     }
                     // Mile to...
                     if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 0) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(FOOT);
+                        ut = MILE.getConverterTo(FOOT);
                         val1 = ut.convert(Measure.valueOf(val1, FOOT).doubleValue(FOOT));
                         result.setText(String.valueOf(val1));
 
                     } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 1) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(YARD);
+                        ut = MILE.getConverterTo(YARD);
                         val1 = ut.convert(Measure.valueOf(val1, YARD).doubleValue(YARD));
                         result.setText(String.valueOf(val1));
 
                     } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 2) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(MILE);
+                        ut = MILE.getConverterTo(MILE);
                         val1 = ut.convert(Measure.valueOf(val1, MILE).doubleValue(MILE));
                         result.setText(String.valueOf(val1));
 
                     } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 4) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(NAUTICAL_MILE);
+                        ut = MILE.getConverterTo(NAUTICAL_MILE);
                         val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILE.getConverterTo(MILLIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE).doubleValue(MILLIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILE.getConverterTo(CENTIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CENTIMETRE).doubleValue(CENTIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 7) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILE.getConverterTo(METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, METRE).doubleValue(METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 8) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILE.getConverterTo(KILOMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
                         result.setText(String.valueOf(val1));
 
                     }
                     // N-Miles to...
                     if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 0) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(FOOT);
-                        val1 = ut.convert(Measure.valueOf(val1, FOOT).doubleValue(FOOT));
+                        ut = NAUTICAL_MILE.getConverterTo(INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH).doubleValue(INCH));
                         result.setText(String.valueOf(val1));
 
                     } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 1) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(YARD);
-                        val1 = ut.convert(Measure.valueOf(val1, YARD).doubleValue(YARD));
+                        ut = NAUTICAL_MILE.getConverterTo(FOOT);
+                        val1 = ut.convert(Measure.valueOf(val1, FOOT).doubleValue(FOOT));
                         result.setText(String.valueOf(val1));
 
                     } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 2) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(MILE);
-                        val1 = ut.convert(Measure.valueOf(val1, MILE).doubleValue(MILE));
+                        ut = NAUTICAL_MILE.getConverterTo(YARD);
+                        val1 = ut.convert(Measure.valueOf(val1, YARD).doubleValue(YARD));
                         result.setText(String.valueOf(val1));
 
                     } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 3) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(NAUTICAL_MILE);
-                        val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
+                        ut = NAUTICAL_MILE.getConverterTo(MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILE).doubleValue(MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = NAUTICAL_MILE.getConverterTo(MILLIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE).doubleValue(MILLIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = NAUTICAL_MILE.getConverterTo(CENTIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CENTIMETRE).doubleValue(CENTIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 7) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = NAUTICAL_MILE.getConverterTo(METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, METRE).doubleValue(METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 8) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = NAUTICAL_MILE.getConverterTo(KILOMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
                         result.setText(String.valueOf(val1));
 
                     }
-                    if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 0) {
+                    //Millimeter to...
+                    if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 0) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(FOOT);
+                        ut = MILLIMETRE.getConverterTo(INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH).doubleValue(INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILLIMETRE.getConverterTo(FOOT);
                         val1 = ut.convert(Measure.valueOf(val1, FOOT).doubleValue(FOOT));
                         result.setText(String.valueOf(val1));
 
-                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 1) {
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 2) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(YARD);
+                        ut = MILLIMETRE.getConverterTo(YARD);
                         val1 = ut.convert(Measure.valueOf(val1, YARD).doubleValue(YARD));
                         result.setText(String.valueOf(val1));
 
-                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 2) {
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 3) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(MILE);
+                        ut = MILLIMETRE.getConverterTo(MILE);
                         val1 = ut.convert(Measure.valueOf(val1, MILE).doubleValue(MILE));
                         result.setText(String.valueOf(val1));
 
-                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 3) {
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 4) {
                         val1 = Double.parseDouble(info.getText().toString());
-                        ut = INCH.getConverterTo(NAUTICAL_MILE);
+                        ut = MILLIMETRE.getConverterTo(NAUTICAL_MILE);
                         val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILLIMETRE.getConverterTo(CENTIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CENTIMETRE).doubleValue(CENTIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 7) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILLIMETRE.getConverterTo(METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, METRE).doubleValue(METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 8) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILLIMETRE.getConverterTo(KILOMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    //Centimeter to...
+                    } if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CENTIMETRE.getConverterTo(INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH).doubleValue(INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CENTIMETRE.getConverterTo(FOOT);
+                        val1 = ut.convert(Measure.valueOf(val1, FOOT).doubleValue(FOOT));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CENTIMETRE.getConverterTo(YARD);
+                        val1 = ut.convert(Measure.valueOf(val1, YARD).doubleValue(YARD));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CENTIMETRE.getConverterTo(MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILE).doubleValue(MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CENTIMETRE.getConverterTo(NAUTICAL_MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CENTIMETRE.getConverterTo(MILLIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE).doubleValue(MILLIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 7) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CENTIMETRE.getConverterTo(METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, METRE).doubleValue(METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 8) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CENTIMETRE.getConverterTo(KILOMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    //Meter to...
+                    if (infospinner.getSelectedItemId() == 7 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRE.getConverterTo(INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH).doubleValue(INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 7 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRE.getConverterTo(FOOT);
+                        val1 = ut.convert(Measure.valueOf(val1, FOOT).doubleValue(FOOT));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 7 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRE.getConverterTo(YARD);
+                        val1 = ut.convert(Measure.valueOf(val1, YARD).doubleValue(YARD));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 7 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRE.getConverterTo(MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILE).doubleValue(MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 7 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRE.getConverterTo(NAUTICAL_MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 7 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRE.getConverterTo(MILLIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE).doubleValue(MILLIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 7 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRE.getConverterTo(CENTIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CENTIMETRE).doubleValue(CENTIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 7 && resultspinner.getSelectedItemId() == 8) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRE.getConverterTo(KILOMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    //Kilometer to...
+                    } if (infospinner.getSelectedItemId() == 8 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRE.getConverterTo(INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH).doubleValue(INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 8 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRE.getConverterTo(FOOT);
+                        val1 = ut.convert(Measure.valueOf(val1, FOOT).doubleValue(FOOT));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 8 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRE.getConverterTo(YARD);
+                        val1 = ut.convert(Measure.valueOf(val1, YARD).doubleValue(YARD));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 8 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRE.getConverterTo(MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILE).doubleValue(MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 8 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRE.getConverterTo(NAUTICAL_MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 8 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRE.getConverterTo(MILLIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE).doubleValue(MILLIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 8 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRE.getConverterTo(CENTIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CENTIMETRE).doubleValue(CENTIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 8 && resultspinner.getSelectedItemId() == 7) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRE.getConverterTo(METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, METRE).doubleValue(METRE));
                         result.setText(String.valueOf(val1));
 
                     }
