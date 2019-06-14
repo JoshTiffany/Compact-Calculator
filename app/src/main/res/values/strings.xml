@@ -51,5 +51,19 @@
         <item>Meter</item>
         <item>Kilometer</item>
     </string-array>
+    <string-array name="time1">
+        <item>Second</item>
+        <item>Minute</item>
+        <item>Hour</item>
+        <item>Day</item>
+        <item>Week</item>
+    </string-array>
+    <string-array name="time2">
+        <item>Second</item>
+        <item>Minute</item>
+        <item>Hour</item>
+        <item>Day</item>
+        <item>Week</item>
+    </string-array>
     <string name="title_activity_time">TimeActivity</string>
 </resources>

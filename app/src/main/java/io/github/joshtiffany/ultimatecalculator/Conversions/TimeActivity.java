@@ -14,6 +14,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
@@ -21,6 +26,11 @@ import io.github.joshtiffany.ultimatecalculator.R;
 
 public class TimeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Button calc;
+    private Spinner infospinner, resultspinner;
+    private TextView result;
+    private EditText info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +45,33 @@ public class TimeActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        uiSetup();
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.time1, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        infospinner.setAdapter(adapter);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
+                R.array.time2, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        resultspinner.setAdapter(adapter2);
+
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (info.getText().length() > 0) {
+
+                }
+            }
+        });
+
+    }
+
+    public void uiSetup() {
+        calc = findViewById(R.id.timeCalcBTN3);
+        resultspinner = findViewById(R.id.timeResultSpinner3);
+        infospinner = findViewById(R.id.timeInfoSpinner5);
+        info = findViewById(R.id.timeInfoTV5);
+        result = findViewById(R.id.timeResultTV3);
     }
 
     @Override

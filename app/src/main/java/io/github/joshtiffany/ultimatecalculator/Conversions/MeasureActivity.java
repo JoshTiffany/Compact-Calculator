@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
+import javax.measure.quantity.Duration;
 import javax.measure.quantity.Length;
 import javax.measure.unit.NonSI;
 import javax.measure.unit.SI;
