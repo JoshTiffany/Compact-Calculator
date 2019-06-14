@@ -372,8 +372,9 @@ public class MeasureActivity extends AppCompatActivity
                         val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
                         result.setText(String.valueOf(val1));
 
-                    //Centimeter to...
-                    } if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 0) {
+                        //Centimeter to...
+                    }
+                    if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 0) {
                         val1 = Double.parseDouble(info.getText().toString());
                         ut = CENTIMETRE.getConverterTo(INCH);
                         val1 = ut.convert(Measure.valueOf(val1, INCH).doubleValue(INCH));
@@ -472,8 +473,9 @@ public class MeasureActivity extends AppCompatActivity
                         val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
                         result.setText(String.valueOf(val1));
 
-                    //Kilometer to...
-                    } if (infospinner.getSelectedItemId() == 8 && resultspinner.getSelectedItemId() == 0) {
+                        //Kilometer to...
+                    }
+                    if (infospinner.getSelectedItemId() == 8 && resultspinner.getSelectedItemId() == 0) {
                         val1 = Double.parseDouble(info.getText().toString());
                         ut = KILOMETRE.getConverterTo(INCH);
                         val1 = ut.convert(Measure.valueOf(val1, INCH).doubleValue(INCH));
@@ -601,6 +603,9 @@ public class MeasureActivity extends AppCompatActivity
             Intent startintent = new Intent(getApplicationContext(), MeasureActivity.class);
             startActivity(startintent);
 
+        } else if (id == R.id.nav_time) {
+            Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
+            startActivity(startintent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

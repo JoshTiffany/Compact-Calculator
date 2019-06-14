@@ -51,4 +51,5 @@
         <item>Meter</item>
         <item>Kilometer</item>
     </string-array>
+    <string name="title_activity_time">TimeActivity</string>
 </resources>

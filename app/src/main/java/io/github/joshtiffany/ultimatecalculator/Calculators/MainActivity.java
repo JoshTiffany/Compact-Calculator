@@ -18,6 +18,7 @@ import java.text.DecimalFormat;
 
 import io.github.joshtiffany.ultimatecalculator.Conversions.MeasureActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TempActivity;
+import io.github.joshtiffany.ultimatecalculator.Conversions.TimeActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class MainActivity extends AppCompatActivity
@@ -432,6 +433,10 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_send) {
             Intent startintent = new Intent(getApplicationContext(), MeasureActivity.class);
+            startActivity(startintent);
+
+        } else if (id == R.id.nav_time) {
+            Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
             startActivity(startintent);
         }
 
