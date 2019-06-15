@@ -20,9 +20,27 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import javax.measure.Measure;
+import javax.measure.converter.UnitConverter;
+
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
+
+import static javax.measure.unit.NonSI.DAY;
+import static javax.measure.unit.NonSI.FOOT;
+import static javax.measure.unit.NonSI.HOUR;
+import static javax.measure.unit.NonSI.INCH;
+import static javax.measure.unit.NonSI.MILE;
+import static javax.measure.unit.NonSI.MINUTE;
+import static javax.measure.unit.NonSI.NAUTICAL_MILE;
+import static javax.measure.unit.NonSI.WEEK;
+import static javax.measure.unit.NonSI.YARD;
+import static javax.measure.unit.SI.CENTIMETRE;
+import static javax.measure.unit.SI.KILOMETRE;
+import static javax.measure.unit.SI.METRE;
+import static javax.measure.unit.SI.MILLIMETRE;
+import static javax.measure.unit.SI.SECOND;
 
 public class TimeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,6 +49,8 @@ public class TimeActivity extends AppCompatActivity
     private Spinner infospinner, resultspinner;
     private TextView result;
     private EditText info;
+    private Double val1;
+    private UnitConverter ut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +79,135 @@ public class TimeActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 if (info.getText().length() > 0) {
+                    // Second to...
+                    if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SECOND.getConverterTo(MINUTE);
+                        val1 = ut.convert(Measure.valueOf(val1, MINUTE).doubleValue(MINUTE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SECOND.getConverterTo(HOUR);
+                        val1 = ut.convert(Measure.valueOf(val1, HOUR).doubleValue(HOUR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SECOND.getConverterTo(DAY);
+                        val1 = ut.convert(Measure.valueOf(val1, DAY).doubleValue(DAY));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SECOND.getConverterTo(WEEK);
+                        val1 = ut.convert(Measure.valueOf(val1, WEEK).doubleValue(WEEK));
+                        result.setText(String.valueOf(val1));
+                    }
+
+                    // Minute to...
+                    if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MINUTE.getConverterTo(SECOND);
+                        val1 = ut.convert(Measure.valueOf(val1, SECOND).doubleValue(SECOND));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MINUTE.getConverterTo(HOUR);
+                        val1 = ut.convert(Measure.valueOf(val1, HOUR).doubleValue(HOUR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MINUTE.getConverterTo(DAY);
+                        val1 = ut.convert(Measure.valueOf(val1, DAY).doubleValue(DAY));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MINUTE.getConverterTo(WEEK);
+                        val1 = ut.convert(Measure.valueOf(val1, WEEK).doubleValue(WEEK));
+                        result.setText(String.valueOf(val1));
+                    }
+
+                    // Hour to...
+                    if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = HOUR.getConverterTo(SECOND);
+                        val1 = ut.convert(Measure.valueOf(val1, SECOND).doubleValue(SECOND));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = HOUR.getConverterTo(MINUTE);
+                        val1 = ut.convert(Measure.valueOf(val1, MINUTE).doubleValue(MINUTE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = HOUR.getConverterTo(DAY);
+                        val1 = ut.convert(Measure.valueOf(val1, DAY).doubleValue(DAY));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = HOUR.getConverterTo(WEEK);
+                        val1 = ut.convert(Measure.valueOf(val1, WEEK).doubleValue(WEEK));
+                        result.setText(String.valueOf(val1));
+                    }
+
+                    // Day to...
+                    if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = DAY.getConverterTo(SECOND);
+                        val1 = ut.convert(Measure.valueOf(val1, SECOND).doubleValue(SECOND));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = DAY.getConverterTo(MINUTE);
+                        val1 = ut.convert(Measure.valueOf(val1, MINUTE).doubleValue(MINUTE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = DAY.getConverterTo(HOUR);
+                        val1 = ut.convert(Measure.valueOf(val1, HOUR).doubleValue(HOUR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = DAY.getConverterTo(WEEK);
+                        val1 = ut.convert(Measure.valueOf(val1, WEEK).doubleValue(WEEK));
+                        result.setText(String.valueOf(val1));
+                    }
+
+                    // Week to...
+                    if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = WEEK.getConverterTo(SECOND);
+                        val1 = ut.convert(Measure.valueOf(val1, SECOND).doubleValue(SECOND));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = WEEK.getConverterTo(MINUTE);
+                        val1 = ut.convert(Measure.valueOf(val1, MINUTE).doubleValue(MINUTE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = WEEK.getConverterTo(HOUR);
+                        val1 = ut.convert(Measure.valueOf(val1, HOUR).doubleValue(HOUR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = WEEK.getConverterTo(DAY);
+                        val1 = ut.convert(Measure.valueOf(val1, DAY).doubleValue(DAY));
+                        result.setText(String.valueOf(val1));
+                    }
 
                 }
             }
