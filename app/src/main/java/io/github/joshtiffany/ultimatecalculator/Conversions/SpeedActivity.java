@@ -20,17 +20,32 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import javax.measure.Measure;
+import javax.measure.converter.UnitConverter;
+
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
+
+import static javax.measure.unit.NonSI.DAY;
+import static javax.measure.unit.NonSI.FEET_PER_SECOND;
+import static javax.measure.unit.NonSI.HOUR;
+import static javax.measure.unit.NonSI.KILOMETRES_PER_HOUR;
+import static javax.measure.unit.NonSI.MILES_PER_HOUR;
+import static javax.measure.unit.NonSI.MINUTE;
+import static javax.measure.unit.NonSI.WEEK;
+import static javax.measure.unit.SI.METRES_PER_SECOND;
+import static javax.measure.unit.SI.SECOND;
 
 public class SpeedActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Button calc;
-    private Spinner infospinner,resultspinner;
+    private Spinner infospinner, resultspinner;
     private EditText info;
     private TextView result;
+    private Double val1;
+    private UnitConverter ut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +70,98 @@ public class SpeedActivity extends AppCompatActivity
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         resultspinner.setAdapter(adapter2);
 
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (info.getText().length() > 0) {
+                    // KILO/HOUR to...
+                    if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRES_PER_HOUR.getConverterTo(METRES_PER_SECOND);
+                        val1 = ut.convert(Measure.valueOf(val1, METRES_PER_SECOND).doubleValue(METRES_PER_SECOND));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRES_PER_HOUR.getConverterTo(MILES_PER_HOUR);
+                        val1 = ut.convert(Measure.valueOf(val1, MILES_PER_HOUR).doubleValue(MILES_PER_HOUR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOMETRES_PER_HOUR.getConverterTo(FEET_PER_SECOND);
+                        val1 = ut.convert(Measure.valueOf(val1, FEET_PER_SECOND).doubleValue(FEET_PER_SECOND));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    // METER/SEC to...
+                    if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRES_PER_SECOND.getConverterTo(KILOMETRES_PER_HOUR);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRES_PER_HOUR).doubleValue(KILOMETRES_PER_HOUR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRES_PER_SECOND.getConverterTo(MILES_PER_HOUR);
+                        val1 = ut.convert(Measure.valueOf(val1, MILES_PER_HOUR).doubleValue(MILES_PER_HOUR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRES_PER_SECOND.getConverterTo(FEET_PER_SECOND);
+                        val1 = ut.convert(Measure.valueOf(val1, FEET_PER_SECOND).doubleValue(FEET_PER_SECOND));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    // MILES/HOUR to...
+                    if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILES_PER_HOUR.getConverterTo(KILOMETRES_PER_HOUR);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRES_PER_HOUR).doubleValue(KILOMETRES_PER_HOUR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILES_PER_HOUR.getConverterTo(METRES_PER_SECOND);
+                        val1 = ut.convert(Measure.valueOf(val1, METRES_PER_SECOND).doubleValue(METRES_PER_SECOND));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILES_PER_HOUR.getConverterTo(FEET_PER_SECOND);
+                        val1 = ut.convert(Measure.valueOf(val1, FEET_PER_SECOND).doubleValue(FEET_PER_SECOND));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    // FEET/SEC to...
+                    if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = FEET_PER_SECOND.getConverterTo(KILOMETRES_PER_HOUR);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRES_PER_HOUR).doubleValue(KILOMETRES_PER_HOUR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = FEET_PER_SECOND.getConverterTo(METRES_PER_SECOND);
+                        val1 = ut.convert(Measure.valueOf(val1, METRES_PER_SECOND).doubleValue(METRES_PER_SECOND));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = FEET_PER_SECOND.getConverterTo(MILES_PER_HOUR);
+                        val1 = ut.convert(Measure.valueOf(val1, MILES_PER_HOUR).doubleValue(MILES_PER_HOUR));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+
+                }
+            }
+        });
 
 
     }
