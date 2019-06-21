@@ -65,5 +65,18 @@
         <item>Day</item>
         <item>Week</item>
     </string-array>
+    <string-array name="speed1">
+        <item>Kilo/Hour</item>
+        <item>Meter/Sec</item>
+        <item>Mile/Hour</item>
+        <item>Feet/Sec</item>
+    </string-array>
+    <string-array name="speed2">
+        <item>Kilo/Hour</item>
+        <item>Meter/Sec</item>
+        <item>Mile/Hour</item>
+        <item>Feet/Sec</item>
+    </string-array>
     <string name="title_activity_time">TimeActivity</string>
+    <string name="title_activity_speed">SpeedActivity</string>
 </resources>

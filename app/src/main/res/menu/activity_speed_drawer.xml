@@ -4,20 +4,18 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-
         <item android:title="@string/Calculators">
-            <menu>
-                <item
-                    android:id="@+id/nav_standard"
-                    android:icon="@drawable/ic_menu_camera"
-                    android:title="@string/Standard" />
-                <item
-                    android:id="@+id/nav_scientific"
-                    android:icon="@drawable/ic_menu_gallery"
-                    android:title="@string/Scientific" />
-            </menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="@string/Standard" />
+            <item
+                android:id="@+id/nav_gallery"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/Scientific" />
         </item>
     </group>
+
 
     <item android:title="Conversions">
         <menu>
@@ -30,7 +28,8 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="Length" />
             <item
-                android:id="@+id/nav_time"
+                android:id="@+id/time"
+                android:icon="@drawable/ic_menu_send"
                 android:title="Time" />
             <item
                 android:id="@+id/speed"

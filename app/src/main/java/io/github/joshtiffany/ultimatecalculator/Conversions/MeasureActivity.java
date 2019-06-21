@@ -607,6 +607,10 @@ public class MeasureActivity extends AppCompatActivity
         } else if (id == R.id.nav_time) {
             Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
             startActivity(startintent);
+
+        } else if (id==R.id.speed) {
+            Intent startintent = new Intent(getApplicationContext(), SpeedActivity.class);
+            startActivity(startintent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
