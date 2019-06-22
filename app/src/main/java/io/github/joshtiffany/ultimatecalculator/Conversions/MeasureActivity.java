@@ -11,7 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,20 +20,21 @@ import android.widget.TextView;
 
 import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
-import javax.measure.quantity.Duration;
-import javax.measure.quantity.Length;
-import javax.measure.unit.NonSI;
-import javax.measure.unit.SI;
-import javax.measure.unit.SI.*;
-import javax.measure.*;
-import javax.measure.unit.Unit;
-
-import static javax.measure.unit.NonSI.*;
-import static javax.measure.unit.SI.*;
+import javax.measure.unit.SI.MetricPrefix;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
+
+import static javax.measure.unit.NonSI.FOOT;
+import static javax.measure.unit.NonSI.INCH;
+import static javax.measure.unit.NonSI.MILE;
+import static javax.measure.unit.NonSI.NAUTICAL_MILE;
+import static javax.measure.unit.NonSI.YARD;
+import static javax.measure.unit.SI.CENTIMETRE;
+import static javax.measure.unit.SI.KILOMETRE;
+import static javax.measure.unit.SI.METRE;
+import static javax.measure.unit.SI.MILLIMETRE;
 
 public class MeasureActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemSelectedListener {
@@ -747,6 +747,9 @@ public class MeasureActivity extends AppCompatActivity
                         result.setText(String.valueOf(val1));
 
                     }
+
+
+                    // NANO to...
                     if (infospinner.getSelectedItemId() == 9 && resultspinner.getSelectedItemId() == 0) {
                         val1 = Double.parseDouble(info.getText().toString());
                         ut = MetricPrefix.NANO(METRE).getConverterTo(INCH);
@@ -818,6 +821,235 @@ public class MeasureActivity extends AppCompatActivity
                         ut = MetricPrefix.NANO(METRE).getConverterTo(MetricPrefix.DEKA(METRE));
                         val1 = ut.convert(Measure.valueOf(val1, MetricPrefix.DEKA(METRE)).doubleValue(MetricPrefix.DEKA(METRE)));
                         result.setText(String.valueOf(val1));
+
+                    }
+
+
+                    // MICRO to...
+                    if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH).doubleValue(INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(FOOT);
+                        val1 = ut.convert(Measure.valueOf(val1, FOOT).doubleValue(FOOT));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(YARD);
+                        val1 = ut.convert(Measure.valueOf(val1, YARD).doubleValue(YARD));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILE).doubleValue(MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(NAUTICAL_MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(MILLIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE).doubleValue(MILLIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(CENTIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CENTIMETRE).doubleValue(CENTIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 7) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, METRE).doubleValue(METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 8) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(KILOMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 9) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(MetricPrefix.NANO(METRE));
+                        val1 = ut.convert(Measure.valueOf(val1, MetricPrefix.NANO(METRE)).doubleValue(MetricPrefix.NANO(METRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 11) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(MetricPrefix.DECI(METRE));
+                        val1 = ut.convert(Measure.valueOf(val1, MetricPrefix.DECI(METRE)).doubleValue(MetricPrefix.DECI(METRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 10 && resultspinner.getSelectedItemId() == 12) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.MICRO(METRE).getConverterTo(MetricPrefix.DEKA(METRE));
+                        val1 = ut.convert(Measure.valueOf(val1, MetricPrefix.DEKA(METRE)).doubleValue(MetricPrefix.DEKA(METRE)));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+
+                    // DECI to...
+                    if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH).doubleValue(INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(FOOT);
+                        val1 = ut.convert(Measure.valueOf(val1, FOOT).doubleValue(FOOT));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(YARD);
+                        val1 = ut.convert(Measure.valueOf(val1, YARD).doubleValue(YARD));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILE).doubleValue(MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(NAUTICAL_MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(MILLIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE).doubleValue(MILLIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(CENTIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CENTIMETRE).doubleValue(CENTIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 7) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, METRE).doubleValue(METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 8) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(KILOMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 9) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(MetricPrefix.NANO(METRE));
+                        val1 = ut.convert(Measure.valueOf(val1, MetricPrefix.NANO(METRE)).doubleValue(MetricPrefix.NANO(METRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 10) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(MetricPrefix.MICRO(METRE));
+                        val1 = ut.convert(Measure.valueOf(val1, MetricPrefix.MICRO(METRE)).doubleValue(MetricPrefix.MICRO(METRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 11 && resultspinner.getSelectedItemId() == 12) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DECI(METRE).getConverterTo(MetricPrefix.DEKA(METRE));
+                        val1 = ut.convert(Measure.valueOf(val1, MetricPrefix.DEKA(METRE)).doubleValue(MetricPrefix.DEKA(METRE)));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+
+                    // DEKA to...
+                    if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH).doubleValue(INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(FOOT);
+                        val1 = ut.convert(Measure.valueOf(val1, FOOT).doubleValue(FOOT));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(YARD);
+                        val1 = ut.convert(Measure.valueOf(val1, YARD).doubleValue(YARD));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILE).doubleValue(MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(NAUTICAL_MILE);
+                        val1 = ut.convert(Measure.valueOf(val1, NAUTICAL_MILE).doubleValue(NAUTICAL_MILE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(MILLIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE).doubleValue(MILLIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(CENTIMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CENTIMETRE).doubleValue(CENTIMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 7) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, METRE).doubleValue(METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 8) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(KILOMETRE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOMETRE).doubleValue(KILOMETRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 9) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(MetricPrefix.NANO(METRE));
+                        val1 = ut.convert(Measure.valueOf(val1, MetricPrefix.NANO(METRE)).doubleValue(MetricPrefix.NANO(METRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 10) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(MetricPrefix.MICRO(METRE));
+                        val1 = ut.convert(Measure.valueOf(val1, MetricPrefix.MICRO(METRE)).doubleValue(MetricPrefix.MICRO(METRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 12 && resultspinner.getSelectedItemId() == 11) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MetricPrefix.DEKA(METRE).getConverterTo(MetricPrefix.DECI(METRE));
+                        val1 = ut.convert(Measure.valueOf(val1, MetricPrefix.DECI(METRE)).doubleValue(MetricPrefix.DECI(METRE)));
+                        result.setText(String.valueOf(val1));
+
                     }
 
 
