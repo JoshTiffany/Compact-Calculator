@@ -17,7 +17,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/app_bar_bar_bColor"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="Measurements" />
+            app:title="Length" />
 
     </android.support.design.widget.AppBarLayout>
 

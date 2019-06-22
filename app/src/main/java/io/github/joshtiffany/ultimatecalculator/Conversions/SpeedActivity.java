@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
+import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
@@ -31,6 +32,7 @@ import static javax.measure.unit.NonSI.DAY;
 import static javax.measure.unit.NonSI.FEET_PER_SECOND;
 import static javax.measure.unit.NonSI.HOUR;
 import static javax.measure.unit.NonSI.KILOMETRES_PER_HOUR;
+import static javax.measure.unit.NonSI.LITRE;
 import static javax.measure.unit.NonSI.MILES_PER_HOUR;
 import static javax.measure.unit.NonSI.MINUTE;
 import static javax.measure.unit.NonSI.WEEK;
@@ -134,6 +136,7 @@ public class SpeedActivity extends AppCompatActivity
                         ut = MILES_PER_HOUR.getConverterTo(FEET_PER_SECOND);
                         val1 = ut.convert(Measure.valueOf(val1, FEET_PER_SECOND).doubleValue(FEET_PER_SECOND));
                         result.setText(String.valueOf(val1));
+
 
                     }
 

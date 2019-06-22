@@ -39,6 +39,10 @@
         <item>Centimeter</item>
         <item>Meter</item>
         <item>Kilometer</item>
+        <item>Nanometer</item>
+        <item>Micrometer</item>
+        <item>Decimeter</item>
+        <item>Decameter</item>
     </string-array>
     <string-array name="measurements2">
         <item>Inches</item>
@@ -50,6 +54,10 @@
         <item>Centimeter</item>
         <item>Meter</item>
         <item>Kilometer</item>
+        <item>Nanometer</item>
+        <item>Micrometer</item>
+        <item>Decimeter</item>
+        <item>Decameter</item>
     </string-array>
     <string-array name="time1">
         <item>Second</item>
