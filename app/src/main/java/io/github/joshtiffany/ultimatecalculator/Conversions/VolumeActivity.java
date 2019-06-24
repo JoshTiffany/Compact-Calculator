@@ -2,39 +2,60 @@ package io.github.joshtiffany.ultimatecalculator.Conversions;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.view.View;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.view.MenuItem;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import static javax.measure.unit.NonSI.DAY;
+import static javax.measure.unit.NonSI.FOOT;
+import static javax.measure.unit.NonSI.HOUR;
+import static javax.measure.unit.NonSI.INCH;
+import static javax.measure.unit.NonSI.MILE;
+import static javax.measure.unit.NonSI.MINUTE;
+import static javax.measure.unit.NonSI.NAUTICAL_MILE;
+import static javax.measure.unit.NonSI.WEEK;
+import static javax.measure.unit.NonSI.YARD;
+import static javax.measure.unit.SI.CENTIMETRE;
+import static javax.measure.unit.SI.KILOMETRE;
+import static javax.measure.unit.SI.METRE;
+import static javax.measure.unit.SI.MILLIMETRE;
+import static javax.measure.unit.SI.SECOND;
+
+import javax.measure.converter.UnitConverter;
+import javax.measure.quantity.Volume;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
-public class TempActivity extends AppCompatActivity
+public class VolumeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Button calc;
+    private Spinner infospinner, resultspinner;
     private EditText info;
     private TextView result;
-    private Button infoselc;
-    private Button resultselc;
-    private Button calc;
-    int temp;
-    int val1;
-
+    private int val1;
+    private UnitConverter ut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temp);
+        setContentView(R.layout.activity_volume);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -44,72 +65,34 @@ public class TempActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        uisetup();
 
-        uiSetUp();
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.volume1, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        infospinner.setAdapter(adapter);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
+                R.array.volume2, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        resultspinner.setAdapter(adapter2);
+
 
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (info.getText().length() > 0) {
-                    if (infoselc.getTag().equals(0) && resultselc.getTag().equals(0)) {
-                        val1 = Integer.parseInt(info.getText().toString());
 
-                        temp = ((val1 - 32) * 5) / 9;
-                        result.setText(String.valueOf(temp));
-                    } else if (infoselc.getTag().equals(1) && resultselc.getTag().equals(1)) {
-                        val1 = Integer.parseInt(info.getText().toString());
-
-                        temp = (val1 * 9 / 5) + 32;
-                        result.setText(String.valueOf(temp));
-                    }
-                }
-
-            }
-        });
-        infoselc.setTag(0);
-        infoselc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final int status = (Integer) v.getTag();
-                switch (status) {
-                    case 0:
-                        v.setTag(1);
-                        infoselc.setText("°C");
-                        break;
-                    case 1:
-                        v.setTag(0);
-                        infoselc.setText("°F");
-                        break;
-                }
-            }
-        });
-
-        resultselc.setTag(0);
-        resultselc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final int status = (Integer) v.getTag();
-                switch (status) {
-                    case 0:
-                        v.setTag(1);
-                        resultselc.setText("°F");
-                        break;
-                    case 1:
-                        v.setTag(0);
-                        resultselc.setText("°C");
-                        break;
                 }
             }
         });
     }
 
-
-    public void uiSetUp() {
-        info = findViewById(R.id.tempInfoTV);
-        result = findViewById(R.id.tempResultTV);
-        infoselc = findViewById(R.id.infoSelc);
-        resultselc = findViewById(R.id.resultSelc);
-        calc = findViewById(R.id.calc);
+    public void uisetup() {
+        calc = findViewById(R.id.volumeCalcBTN);
+        infospinner = findViewById(R.id.volumeInfoSpinner);
+        resultspinner = findViewById(R.id.volumeResultSpinner);
+        info = findViewById(R.id.volumeInfoTV);
+        result = findViewById(R.id.volumeResultTV);
     }
 
     @Override
@@ -125,7 +108,7 @@ public class TempActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.temp, menu);
+        getMenuInflater().inflate(R.menu.volume, menu);
         return true;
     }
 

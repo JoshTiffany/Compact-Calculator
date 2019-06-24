@@ -5,22 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Conversions.TimeActivity"
-    tools:showIn="@layout/app_bar_time">
+    tools:context=".Conversions.VolumeActivity"
+    tools:showIn="@layout/app_bar_volume">
 
     <Button
-        android:id="@+id/timeCalcBTN3"
+        android:id="@+id/volumeCalcBTN"
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:layout_marginTop="92dp"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView6"
         android:layout_width="25dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -30,30 +29,30 @@
         android:layout_marginRight="8dp"
         android:text="="
         android:textSize="50sp"
-        app:layout_constraintEnd_toStartOf="@+id/timeResultTV3"
-        app:layout_constraintStart_toEndOf="@+id/timeInfoTV5"
+        app:layout_constraintEnd_toStartOf="@+id/volumeResultTV"
+        app:layout_constraintStart_toEndOf="@+id/volumeInfoTV"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/timeResultSpinner3"
+        android:id="@+id/volumeResultSpinner"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeResultTV3" />
+        app:layout_constraintTop_toBottomOf="@+id/volumeResultTV" />
 
     <Spinner
-        android:id="@+id/timeInfoSpinner5"
+        android:id="@+id/volumeInfoSpinner"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeInfoTV5" />
+        app:layout_constraintTop_toBottomOf="@+id/volumeInfoTV" />
 
     <TextView
-        android:id="@+id/timeResultTV3"
+        android:id="@+id/volumeResultTV"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="179dp"
@@ -65,7 +64,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/timeInfoTV5"
+        android:id="@+id/volumeInfoTV"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="36dp"

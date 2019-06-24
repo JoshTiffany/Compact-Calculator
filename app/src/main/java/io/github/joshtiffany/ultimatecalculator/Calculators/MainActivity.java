@@ -20,6 +20,7 @@ import io.github.joshtiffany.ultimatecalculator.Conversions.MeasureActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.SpeedActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TempActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TimeActivity;
+import io.github.joshtiffany.ultimatecalculator.Conversions.VolumeActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class MainActivity extends AppCompatActivity
@@ -421,27 +422,26 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
 
-        if (id == R.id.nav_first_layout) {
+        if (id == R.id.nav_home) {
             Intent startintent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_second_layout) {
+        } else if (id == R.id.nav_gallery) {
             Intent startintent = new Intent(getApplicationContext(), ScientificActivity.class);
             startActivity(startintent);
-
         } else if (id == R.id.nav_share) {
             Intent startintent = new Intent(getApplicationContext(), TempActivity.class);
             startActivity(startintent);
-
         } else if (id == R.id.nav_send) {
             Intent startintent = new Intent(getApplicationContext(), MeasureActivity.class);
             startActivity(startintent);
-
         } else if (id == R.id.nav_time) {
             Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
             startActivity(startintent);
-
         } else if (id == R.id.speed) {
             Intent startintent = new Intent(getApplicationContext(), SpeedActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.volume) {
+            Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
             startActivity(startintent);
         }
 

@@ -85,6 +85,34 @@
         <item>Mile/Hour</item>
         <item>Feet/Sec</item>
     </string-array>
+    <string-array name="volume1">
+        <item>Cubic Inch</item>
+        <item>Cubic Meter</item>
+        <item>Milliliter</item>
+        <item>Deciliter</item>
+        <item>Liter</item>
+        <item>Gallon</item>
+    </string-array>
+    <string-array name="volume2">
+        <item>Cubic Inch</item>
+        <item>Cubic Meter</item>
+        <item>Milliliter</item>
+        <item>Deciliter</item>
+        <item>Liter</item>
+        <item>Gallon</item>
+    </string-array>
     <string name="title_activity_time">TimeActivity</string>
     <string name="title_activity_speed">SpeedActivity</string>
+    <string name="title_activity_volume">VolumeActivity</string>
+    <string name="conversions">Conversions</string>
+    <string name="temperature">Temperature</string>
+    <string name="length">Length</string>
+    <string name="time">time</string>
+    <string name="speed">Speed</string>
+    <string name="Time">Time</string>
+    <string name="Temperature">Temperature</string>
+    <string name="volume">Volume</string>
+    <string name="Volume">Volume</string>
+    <string name="compactcalculator">CompactCalculator</string>
+    <string name="Compactcalculator">Compactcalculator</string>
 </resources>

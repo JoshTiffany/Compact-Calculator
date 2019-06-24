@@ -33,6 +33,10 @@
                 android:id="@+id/speed"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Speed" />
+            <item
+                android:id="@+id/volume"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/Volume" />
         </menu>
     </item>
 

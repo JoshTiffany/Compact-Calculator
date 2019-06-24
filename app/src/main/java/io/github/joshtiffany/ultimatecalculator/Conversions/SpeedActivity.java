@@ -22,6 +22,8 @@ import android.widget.TextView;
 
 import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
+import javax.measure.quantity.Velocity;
+import javax.measure.unit.NonSI;
 import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
@@ -35,7 +37,9 @@ import static javax.measure.unit.NonSI.KILOMETRES_PER_HOUR;
 import static javax.measure.unit.NonSI.LITRE;
 import static javax.measure.unit.NonSI.MILES_PER_HOUR;
 import static javax.measure.unit.NonSI.MINUTE;
+import static javax.measure.unit.NonSI.PI;
 import static javax.measure.unit.NonSI.WEEK;
+import static javax.measure.unit.SI.CUBIC_METRE;
 import static javax.measure.unit.SI.METRES_PER_SECOND;
 import static javax.measure.unit.SI.SECOND;
 
@@ -49,6 +53,9 @@ public class SpeedActivity extends AppCompatActivity
     private Double val1;
     private UnitConverter ut;
 
+    ///
+    //// Reminder to add linearLayout ////
+    ///
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -221,20 +228,20 @@ public class SpeedActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
             Intent startintent = new Intent(getApplicationContext(), ScientificActivity.class);
             startActivity(startintent);
-
         } else if (id == R.id.nav_share) {
             Intent startintent = new Intent(getApplicationContext(), TempActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_send) {
             Intent startintent = new Intent(getApplicationContext(), MeasureActivity.class);
             startActivity(startintent);
-
-        } else if (id == R.id.time) {
+        } else if (id == R.id.nav_time) {
             Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
             startActivity(startintent);
-
         } else if (id == R.id.speed) {
             Intent startintent = new Intent(getApplicationContext(), SpeedActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.volume) {
+            Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
             startActivity(startintent);
         }
 
