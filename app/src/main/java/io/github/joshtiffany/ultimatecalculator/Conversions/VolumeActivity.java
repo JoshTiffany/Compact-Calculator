@@ -20,23 +20,30 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import static javax.measure.unit.NonSI.CUBIC_INCH;
 import static javax.measure.unit.NonSI.DAY;
 import static javax.measure.unit.NonSI.FOOT;
+import static javax.measure.unit.NonSI.GALLON_LIQUID_US;
 import static javax.measure.unit.NonSI.HOUR;
 import static javax.measure.unit.NonSI.INCH;
+import static javax.measure.unit.NonSI.LITRE;
+import static javax.measure.unit.NonSI.METRIC_TON;
 import static javax.measure.unit.NonSI.MILE;
 import static javax.measure.unit.NonSI.MINUTE;
 import static javax.measure.unit.NonSI.NAUTICAL_MILE;
 import static javax.measure.unit.NonSI.WEEK;
 import static javax.measure.unit.NonSI.YARD;
 import static javax.measure.unit.SI.CENTIMETRE;
+import static javax.measure.unit.SI.CUBIC_METRE;
 import static javax.measure.unit.SI.KILOMETRE;
 import static javax.measure.unit.SI.METRE;
 import static javax.measure.unit.SI.MILLIMETRE;
 import static javax.measure.unit.SI.SECOND;
 
+import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
 import javax.measure.quantity.Volume;
+import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
@@ -49,7 +56,7 @@ public class VolumeActivity extends AppCompatActivity
     private Spinner infospinner, resultspinner;
     private EditText info;
     private TextView result;
-    private int val1;
+    private double val1;
     private UnitConverter ut;
 
     @Override
@@ -81,6 +88,199 @@ public class VolumeActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 if (info.getText().length() > 0) {
+                    if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CUBIC_INCH.getConverterTo(CUBIC_METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CUBIC_METRE).doubleValue(CUBIC_METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CUBIC_INCH.getConverterTo(SI.MetricPrefix.MILLI(LITRE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(LITRE)).doubleValue(SI.MetricPrefix.MILLI(LITRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CUBIC_INCH.getConverterTo(SI.MetricPrefix.DECI(LITRE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.DECI(LITRE)).doubleValue(SI.MetricPrefix.DECI(LITRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CUBIC_INCH.getConverterTo(LITRE);
+                        val1 = ut.convert(Measure.valueOf(val1, LITRE).doubleValue(LITRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 5) {
+
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CUBIC_INCH.getConverterTo(GALLON_LIQUID_US);
+                        val1 = ut.convert(Measure.valueOf(val1, GALLON_LIQUID_US).doubleValue(GALLON_LIQUID_US));
+                        result.setText(String.valueOf(val1));
+                    }
+
+
+                    // Feet to...
+                    if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CUBIC_METRE.getConverterTo(CUBIC_INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, CUBIC_INCH).doubleValue(CUBIC_INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CUBIC_METRE.getConverterTo(SI.MetricPrefix.MILLI(LITRE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(LITRE)).doubleValue(SI.MetricPrefix.MILLI(LITRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CUBIC_METRE.getConverterTo(SI.MetricPrefix.DECI(LITRE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.DECI(LITRE)).doubleValue(SI.MetricPrefix.DECI(LITRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CUBIC_METRE.getConverterTo(LITRE);
+                        val1 = ut.convert(Measure.valueOf(val1, LITRE).doubleValue(LITRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = CUBIC_METRE.getConverterTo(GALLON_LIQUID_US);
+                        val1 = ut.convert(Measure.valueOf(val1, GALLON_LIQUID_US).doubleValue(GALLON_LIQUID_US));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Yards to...
+                    if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(LITRE).getConverterTo(CUBIC_INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, CUBIC_INCH).doubleValue(CUBIC_INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(LITRE).getConverterTo(CUBIC_METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CUBIC_METRE).doubleValue(CUBIC_METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(LITRE).getConverterTo(SI.MetricPrefix.DECI(LITRE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.DECI(LITRE)).doubleValue(SI.MetricPrefix.DECI(LITRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(LITRE).getConverterTo(LITRE);
+                        val1 = ut.convert(Measure.valueOf(val1, LITRE).doubleValue(LITRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(LITRE).getConverterTo(GALLON_LIQUID_US);
+                        val1 = ut.convert(Measure.valueOf(val1, GALLON_LIQUID_US).doubleValue(GALLON_LIQUID_US));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Mile to...
+                    if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.DECI(LITRE).getConverterTo(CUBIC_INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, CUBIC_INCH).doubleValue(CUBIC_INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.DECI(LITRE).getConverterTo(CUBIC_METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CUBIC_METRE).doubleValue(CUBIC_METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.DECI(LITRE).getConverterTo(SI.MetricPrefix.MILLI(LITRE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(LITRE)).doubleValue(SI.MetricPrefix.MILLI(LITRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.DECI(LITRE).getConverterTo(LITRE);
+                        val1 = ut.convert(Measure.valueOf(val1, LITRE).doubleValue(LITRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.DECI(LITRE).getConverterTo(GALLON_LIQUID_US);
+                        val1 = ut.convert(Measure.valueOf(val1, GALLON_LIQUID_US).doubleValue(GALLON_LIQUID_US));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // N-Miles to...
+                    if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = LITRE.getConverterTo(CUBIC_INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, CUBIC_INCH).doubleValue(CUBIC_INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = LITRE.getConverterTo(CUBIC_METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CUBIC_METRE).doubleValue(CUBIC_METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = LITRE.getConverterTo(SI.MetricPrefix.MILLI(LITRE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(LITRE)).doubleValue(SI.MetricPrefix.MILLI(LITRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = LITRE.getConverterTo(SI.MetricPrefix.DECI(LITRE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.DECI(LITRE)).doubleValue(SI.MetricPrefix.DECI(LITRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = LITRE.getConverterTo(GALLON_LIQUID_US);
+                        val1 = ut.convert(Measure.valueOf(val1, GALLON_LIQUID_US).doubleValue(GALLON_LIQUID_US));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    //Millimeter to...
+                    if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GALLON_LIQUID_US.getConverterTo(CUBIC_INCH);
+                        val1 = ut.convert(Measure.valueOf(val1, CUBIC_INCH).doubleValue(CUBIC_INCH));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GALLON_LIQUID_US.getConverterTo(CUBIC_METRE);
+                        val1 = ut.convert(Measure.valueOf(val1, CUBIC_METRE).doubleValue(CUBIC_METRE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GALLON_LIQUID_US.getConverterTo(SI.MetricPrefix.MILLI(LITRE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(LITRE)).doubleValue(SI.MetricPrefix.MILLI(LITRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GALLON_LIQUID_US.getConverterTo(SI.MetricPrefix.DECI(LITRE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.DECI(LITRE)).doubleValue(SI.MetricPrefix.DECI(LITRE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GALLON_LIQUID_US.getConverterTo(LITRE);
+                        val1 = ut.convert(Measure.valueOf(val1, LITRE).doubleValue(LITRE));
+                        result.setText(String.valueOf(val1));
+
+                    }
 
                 }
             }
