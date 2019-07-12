@@ -1070,11 +1070,11 @@ public class MeasureActivity extends AppCompatActivity
     }
 
     public void uiSetup() {
-        calc = findViewById(R.id.measureCalcBTN);
-        resultspinner = findViewById(R.id.resultSpinner);
-        infospinner = findViewById(R.id.infoSpinner);
-        info = findViewById(R.id.measureInfoTV);
-        result = findViewById(R.id.measureResultTV);
+        calc = findViewById(R.id.forceCalcBTN);
+        resultspinner = findViewById(R.id.forceResultSpinner);
+        infospinner = findViewById(R.id.forceInfoSpinner);
+        info = findViewById(R.id.forceInfoTV);
+        result = findViewById(R.id.forceResultTV);
     }
 
 
@@ -1136,6 +1136,9 @@ public class MeasureActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.volume) {
             Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_force) {
+            Intent startintent = new Intent(getApplicationContext(), ForceActivity.class);
             startActivity(startintent);
         }
 

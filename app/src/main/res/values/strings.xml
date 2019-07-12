@@ -101,6 +101,18 @@
         <item>Liter</item>
         <item>Gallon</item>
     </string-array>
+    <string-array name="force1">
+        <item>Newton</item>
+        <item>Kilogram</item>
+        <item>Dyne</item>
+        <item>Pound</item>
+    </string-array>
+    <string-array name="force2">
+        <item>Newton</item>
+        <item>Kilogram</item>
+        <item>Dyne</item>
+        <item>Pound</item>
+    </string-array>
     <string name="title_activity_time">TimeActivity</string>
     <string name="title_activity_speed">SpeedActivity</string>
     <string name="title_activity_volume">VolumeActivity</string>
@@ -115,4 +127,7 @@
     <string name="Volume">Volume</string>
     <string name="compactcalculator">CompactCalculator</string>
     <string name="Compactcalculator">Compactcalculator</string>
+    <string name="title_activity_force">ForceActivity</string>
+    <string name="Conversions">Conversions</string>
+    <string name="Force">Force</string>
 </resources>

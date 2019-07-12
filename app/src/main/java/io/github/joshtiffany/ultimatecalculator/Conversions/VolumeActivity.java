@@ -354,7 +354,11 @@ public class VolumeActivity extends AppCompatActivity
         } else if (id == R.id.volume) {
             Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
             startActivity(startintent);
+        } else if (id == R.id.nav_force) {
+            Intent startintent = new Intent(getApplicationContext(), ForceActivity.class);
+            startActivity(startintent);
         }
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

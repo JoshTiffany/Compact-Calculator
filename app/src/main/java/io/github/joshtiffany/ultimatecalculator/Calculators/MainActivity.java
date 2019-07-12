@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
+import io.github.joshtiffany.ultimatecalculator.Conversions.ForceActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.MeasureActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.SpeedActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TempActivity;
@@ -442,6 +443,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.volume) {
             Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_force) {
+            Intent startintent = new Intent(getApplicationContext(), ForceActivity.class);
             startActivity(startintent);
         }
 

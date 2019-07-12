@@ -40,6 +40,10 @@
                 android:id="@+id/volume"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/Volume" />
+            <item
+                android:id="@+id/nav_force"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/Force" />
         </menu>
     </item>
 
