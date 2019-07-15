@@ -20,11 +20,21 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
+
+import static javax.measure.unit.NonSI.DYNE;
+import static javax.measure.unit.NonSI.FEET_PER_SECOND;
+import static javax.measure.unit.NonSI.KILOGRAM_FORCE;
+import static javax.measure.unit.NonSI.KILOMETRES_PER_HOUR;
+import static javax.measure.unit.NonSI.MILES_PER_HOUR;
+import static javax.measure.unit.NonSI.POUND_FORCE;
+import static javax.measure.unit.SI.METRES_PER_SECOND;
+import static javax.measure.unit.SI.NEWTON;
 
 public class ForceActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -58,6 +68,101 @@ public class ForceActivity extends AppCompatActivity
                 R.array.force2, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         resultspinner.setAdapter(adapter2);
+
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (info.getText().length() > 0) {
+                    // Newton to...
+                    if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = NEWTON.getConverterTo(KILOGRAM_FORCE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOGRAM_FORCE).doubleValue(KILOGRAM_FORCE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = NEWTON.getConverterTo(DYNE);
+                        val1 = ut.convert(Measure.valueOf(val1, DYNE).doubleValue(DYNE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = NEWTON.getConverterTo(POUND_FORCE);
+                        val1 = ut.convert(Measure.valueOf(val1, POUND_FORCE).doubleValue(POUND_FORCE));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    //
+                    //  KilogramF to...
+                    if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOGRAM_FORCE.getConverterTo(NEWTON);
+                        val1 = ut.convert(Measure.valueOf(val1, NEWTON).doubleValue(NEWTON));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOGRAM_FORCE.getConverterTo(DYNE);
+                        val1 = ut.convert(Measure.valueOf(val1, DYNE).doubleValue(DYNE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOGRAM_FORCE.getConverterTo(POUND_FORCE);
+                        val1 = ut.convert(Measure.valueOf(val1, POUND_FORCE).doubleValue(POUND_FORCE));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    // Dyne to...
+                    if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = DYNE.getConverterTo(NEWTON);
+                        val1 = ut.convert(Measure.valueOf(val1, NEWTON).doubleValue(NEWTON));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = DYNE.getConverterTo(KILOGRAM_FORCE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOGRAM_FORCE).doubleValue(KILOGRAM_FORCE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = DYNE.getConverterTo(POUND_FORCE);
+                        val1 = ut.convert(Measure.valueOf(val1, POUND_FORCE).doubleValue(POUND_FORCE));
+                        result.setText(String.valueOf(val1));
+
+
+                    }
+
+                    // Pound to...
+                    if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = POUND_FORCE.getConverterTo(NEWTON);
+                        val1 = ut.convert(Measure.valueOf(val1, NEWTON).doubleValue(NEWTON));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = POUND_FORCE.getConverterTo(KILOGRAM_FORCE);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOGRAM_FORCE).doubleValue(KILOGRAM_FORCE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = POUND_FORCE.getConverterTo(DYNE);
+                        val1 = ut.convert(Measure.valueOf(val1, DYNE).doubleValue(DYNE));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+
+                }
+            }
+        });
 
     }
 
@@ -122,10 +227,10 @@ public class ForceActivity extends AppCompatActivity
         } else if (id == R.id.nav_time) {
             Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.speed) {
+        } else if (id == R.id.nav_speed) {
             Intent startintent = new Intent(getApplicationContext(), SpeedActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.volume) {
+        } else if (id == R.id.nav_volume) {
             Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_force) {

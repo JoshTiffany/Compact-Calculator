@@ -423,10 +423,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
 
-        if (id == R.id.nav_home) {
+        if (id == R.id.nav_first_layout) {
             Intent startintent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_second_layout) {
             Intent startintent = new Intent(getApplicationContext(), ScientificActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_share) {
