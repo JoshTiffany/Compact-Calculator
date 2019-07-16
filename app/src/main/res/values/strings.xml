@@ -113,6 +113,24 @@
         <item>Dyne</item>
         <item>Pound</item>
     </string-array>
+    <string-array name="weight1">
+        <item>Milligram</item>
+        <item>Centigram</item>
+        <item>Gram</item>
+        <item>Kilogram</item>
+        <item>MetricTon</item>
+        <item>Ounce</item>
+        <item>Pound</item>
+    </string-array>
+    <string-array name="weight2">
+        <item>Milligram</item>
+        <item>Centigram</item>
+        <item>Gram</item>
+        <item>Kilogram</item>
+        <item>MetricTon</item>
+        <item>Ounce</item>
+        <item>Pound</item>
+    </string-array>
     <string name="title_activity_time">TimeActivity</string>
     <string name="title_activity_speed">SpeedActivity</string>
     <string name="title_activity_volume">VolumeActivity</string>
@@ -130,4 +148,6 @@
     <string name="title_activity_force">ForceActivity</string>
     <string name="Conversions">Conversions</string>
     <string name="Force">Force</string>
+    <string name="title_activity_weight_activty">WeightActivty</string>
+    <string name="Weight">Weight</string>
 </resources>

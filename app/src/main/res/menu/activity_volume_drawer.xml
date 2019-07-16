@@ -43,6 +43,10 @@
                 android:id="@+id/nav_force"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/Force" />
+            <item
+                android:id="@+id/nav_weight"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/Weight" />
 
         </menu>
     </item>

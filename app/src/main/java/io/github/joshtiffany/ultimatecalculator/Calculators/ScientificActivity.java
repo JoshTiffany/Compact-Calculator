@@ -24,6 +24,7 @@ import io.github.joshtiffany.ultimatecalculator.Conversions.SpeedActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TempActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TimeActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.VolumeActivity;
+import io.github.joshtiffany.ultimatecalculator.Conversions.WeightActivty;
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class ScientificActivity extends AppCompatActivity
@@ -648,6 +649,9 @@ public class ScientificActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_force) {
             Intent startintent = new Intent(getApplicationContext(), ForceActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_weight) {
+            Intent startintent = new Intent(getApplicationContext(), WeightActivty.class);
             startActivity(startintent);
         }
 
