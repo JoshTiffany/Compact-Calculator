@@ -20,11 +20,28 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
+import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
+
+import static javax.measure.unit.NonSI.FOOT;
+import static javax.measure.unit.NonSI.INCH;
+import static javax.measure.unit.NonSI.METRIC_TON;
+import static javax.measure.unit.NonSI.MILE;
+import static javax.measure.unit.NonSI.NAUTICAL_MILE;
+import static javax.measure.unit.NonSI.OUNCE;
+import static javax.measure.unit.NonSI.POUND;
+import static javax.measure.unit.NonSI.YARD;
+import static javax.measure.unit.SI.CENTIMETRE;
+import static javax.measure.unit.SI.GRAM;
+import static javax.measure.unit.SI.KILOGRAM;
+import static javax.measure.unit.SI.KILOMETRE;
+import static javax.measure.unit.SI.METRE;
+import static javax.measure.unit.SI.MILLIMETRE;
 
 public class WeightActivty extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -60,7 +77,287 @@ public class WeightActivty extends AppCompatActivity
                 R.array.weight2, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         resultspinner.setAdapter(adapter2);
+
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (info.getText().length() > 0) {
+
+                    // Milligram to...
+                    if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(GRAM).getConverterTo(SI.MetricPrefix.CENTI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.CENTI(GRAM)).doubleValue(SI.MetricPrefix.CENTI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(GRAM).getConverterTo(GRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, GRAM).doubleValue(GRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(GRAM).getConverterTo(KILOGRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOGRAM).doubleValue(KILOGRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(GRAM).getConverterTo(METRIC_TON);
+                        val1 = ut.convert(Measure.valueOf(val1, METRIC_TON).doubleValue(METRIC_TON));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(GRAM).getConverterTo(OUNCE);
+                        val1 = ut.convert(Measure.valueOf(val1, OUNCE).doubleValue(OUNCE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(GRAM).getConverterTo(POUND);
+                        val1 = ut.convert(Measure.valueOf(val1, POUND).doubleValue(POUND));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+
+                    // Centigram to...
+                    if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.CENTI(GRAM).getConverterTo(SI.MetricPrefix.MILLI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(GRAM)).doubleValue(SI.MetricPrefix.MILLI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.CENTI(GRAM).getConverterTo(GRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, GRAM).doubleValue(GRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.CENTI(GRAM).getConverterTo(KILOGRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOGRAM).doubleValue(KILOGRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.CENTI(GRAM).getConverterTo(METRIC_TON);
+                        val1 = ut.convert(Measure.valueOf(val1, METRIC_TON).doubleValue(METRIC_TON));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.CENTI(GRAM).getConverterTo(OUNCE);
+                        val1 = ut.convert(Measure.valueOf(val1, OUNCE).doubleValue(OUNCE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.CENTI(GRAM).getConverterTo(POUND);
+                        val1 = ut.convert(Measure.valueOf(val1, POUND).doubleValue(POUND));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Gram to...
+                    if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GRAM.getConverterTo(SI.MetricPrefix.MILLI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(GRAM)).doubleValue(SI.MetricPrefix.MILLI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GRAM.getConverterTo(SI.MetricPrefix.CENTI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.CENTI(GRAM)).doubleValue(SI.MetricPrefix.CENTI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GRAM.getConverterTo(KILOGRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOGRAM).doubleValue(KILOGRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GRAM.getConverterTo(METRIC_TON);
+                        val1 = ut.convert(Measure.valueOf(val1, METRIC_TON).doubleValue(METRIC_TON));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GRAM.getConverterTo(OUNCE);
+                        val1 = ut.convert(Measure.valueOf(val1, OUNCE).doubleValue(OUNCE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = GRAM.getConverterTo(POUND);
+                        val1 = ut.convert(Measure.valueOf(val1, POUND).doubleValue(POUND));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Kilogram to...
+                    if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOGRAM.getConverterTo(SI.MetricPrefix.MILLI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(GRAM)).doubleValue(SI.MetricPrefix.MILLI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOGRAM.getConverterTo(SI.MetricPrefix.CENTI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.CENTI(GRAM)).doubleValue(SI.MetricPrefix.CENTI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOGRAM.getConverterTo(GRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, GRAM).doubleValue(GRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOGRAM.getConverterTo(METRIC_TON);
+                        val1 = ut.convert(Measure.valueOf(val1, METRIC_TON).doubleValue(METRIC_TON));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOGRAM.getConverterTo(OUNCE);
+                        val1 = ut.convert(Measure.valueOf(val1, OUNCE).doubleValue(OUNCE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = KILOGRAM.getConverterTo(POUND);
+                        val1 = ut.convert(Measure.valueOf(val1, POUND).doubleValue(POUND));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Metric_Ton to...
+                    if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRIC_TON.getConverterTo(SI.MetricPrefix.MILLI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(GRAM)).doubleValue(SI.MetricPrefix.MILLI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRIC_TON.getConverterTo(SI.MetricPrefix.CENTI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.CENTI(GRAM)).doubleValue(SI.MetricPrefix.CENTI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRIC_TON.getConverterTo(GRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, GRAM).doubleValue(GRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRIC_TON.getConverterTo(KILOGRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOGRAM).doubleValue(KILOGRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRIC_TON.getConverterTo(OUNCE);
+                        val1 = ut.convert(Measure.valueOf(val1, OUNCE).doubleValue(OUNCE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = METRIC_TON.getConverterTo(POUND);
+                        val1 = ut.convert(Measure.valueOf(val1, POUND).doubleValue(POUND));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    //Ounce to...
+                    if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = OUNCE.getConverterTo(SI.MetricPrefix.MILLI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(GRAM)).doubleValue(SI.MetricPrefix.MILLI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = OUNCE.getConverterTo(SI.MetricPrefix.CENTI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.CENTI(GRAM)).doubleValue(SI.MetricPrefix.CENTI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = OUNCE.getConverterTo(GRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, GRAM).doubleValue(GRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = OUNCE.getConverterTo(KILOGRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOGRAM).doubleValue(KILOGRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = OUNCE.getConverterTo(METRIC_TON);
+                        val1 = ut.convert(Measure.valueOf(val1, METRIC_TON).doubleValue(METRIC_TON));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = OUNCE.getConverterTo(POUND);
+                        val1 = ut.convert(Measure.valueOf(val1, POUND).doubleValue(POUND));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    // Pound to...
+                    if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = POUND.getConverterTo(SI.MetricPrefix.MILLI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(GRAM)).doubleValue(SI.MetricPrefix.MILLI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = POUND.getConverterTo(SI.MetricPrefix.CENTI(GRAM));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.CENTI(GRAM)).doubleValue(SI.MetricPrefix.CENTI(GRAM)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = POUND.getConverterTo(GRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, GRAM).doubleValue(GRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = POUND.getConverterTo(KILOGRAM);
+                        val1 = ut.convert(Measure.valueOf(val1, KILOGRAM).doubleValue(KILOGRAM));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = POUND.getConverterTo(METRIC_TON);
+                        val1 = ut.convert(Measure.valueOf(val1, METRIC_TON).doubleValue(METRIC_TON));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = POUND.getConverterTo(OUNCE);
+                        val1 = ut.convert(Measure.valueOf(val1, OUNCE).doubleValue(OUNCE));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                }
+            }
+        });
     }
+
 
     public void uisetup() {
         calc = findViewById(R.id.weightCalcBTN);
