@@ -131,6 +131,20 @@
         <item>Ounce</item>
         <item>Pound</item>
     </string-array>
+    <string-array name="power1">
+        <item>Megawatt</item>
+        <item>Kilowatt</item>
+        <item>Watt</item>
+        <item>Milliwatt</item>
+        <item>Horse Power</item>
+    </string-array>
+    <string-array name="power2">
+        <item>Megawatt</item>
+        <item>Kilowatt</item>
+        <item>Watt</item>
+        <item>Milliwatt</item>
+        <item>Horse Power</item>
+    </string-array>
     <string name="title_activity_time">TimeActivity</string>
     <string name="title_activity_speed">SpeedActivity</string>
     <string name="title_activity_volume">VolumeActivity</string>
@@ -150,4 +164,6 @@
     <string name="Force">Force</string>
     <string name="title_activity_weight_activty">WeightActivty</string>
     <string name="Weight">Weight</string>
+    <string name="title_activity_power">PowerActivity</string>
+    <string name="Power">Power</string>
 </resources>

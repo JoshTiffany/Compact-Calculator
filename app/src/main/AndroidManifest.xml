@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Conversions.PowerActivity"
+            android:label="@string/title_activity_power"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Conversions.WeightActivty"
             android:label="@string/title_activity_weight_activty"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Conversions.ForceActivity"
             android:label="@string/title_activity_force"

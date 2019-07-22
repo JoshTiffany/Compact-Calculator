@@ -18,6 +18,7 @@ import java.text.DecimalFormat;
 
 import io.github.joshtiffany.ultimatecalculator.Conversions.ForceActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.MeasureActivity;
+import io.github.joshtiffany.ultimatecalculator.Conversions.PowerActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.SpeedActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TempActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TimeActivity;
@@ -450,6 +451,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_weight) {
             Intent startintent = new Intent(getApplicationContext(), WeightActivty.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_power) {
+            Intent startintent = new Intent(getApplicationContext(), PowerActivity.class);
             startActivity(startintent);
         }
 

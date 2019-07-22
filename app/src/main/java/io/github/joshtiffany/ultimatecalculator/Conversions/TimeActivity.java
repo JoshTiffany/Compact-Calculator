@@ -288,6 +288,9 @@ public class TimeActivity extends AppCompatActivity
         } else if (id == R.id.nav_weight) {
             Intent startintent = new Intent(getApplicationContext(), WeightActivty.class);
             startActivity(startintent);
+        } else if (id == R.id.nav_power) {
+            Intent startintent = new Intent(getApplicationContext(), PowerActivity.class);
+            startActivity(startintent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

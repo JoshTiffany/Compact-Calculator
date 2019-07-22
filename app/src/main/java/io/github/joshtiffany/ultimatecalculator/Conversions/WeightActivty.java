@@ -91,6 +91,7 @@ public class WeightActivty extends AppCompatActivity
                         val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.CENTI(GRAM)).doubleValue(SI.MetricPrefix.CENTI(GRAM)));
                         result.setText(String.valueOf(val1));
 
+
                     } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
                         val1 = Double.parseDouble(info.getText().toString());
                         ut = SI.MetricPrefix.MILLI(GRAM).getConverterTo(GRAM);
@@ -431,6 +432,9 @@ public class WeightActivty extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_weight) {
             Intent startintent = new Intent(getApplicationContext(), WeightActivty.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_power) {
+            Intent startintent = new Intent(getApplicationContext(), PowerActivity.class);
             startActivity(startintent);
         }
 
