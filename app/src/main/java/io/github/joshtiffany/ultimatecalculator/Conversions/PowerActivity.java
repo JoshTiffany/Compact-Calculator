@@ -20,11 +20,20 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
+import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
+
+import static javax.measure.unit.NonSI.CUBIC_INCH;
+import static javax.measure.unit.NonSI.GALLON_LIQUID_US;
+import static javax.measure.unit.NonSI.HORSEPOWER;
+import static javax.measure.unit.NonSI.LITRE;
+import static javax.measure.unit.SI.CUBIC_METRE;
+import static javax.measure.unit.SI.WATT;
 
 public class PowerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -60,6 +69,147 @@ public class PowerActivity extends AppCompatActivity
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         resultspinner.setAdapter(adapter2);
 
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (info.getText().length() > 0) {
+                    //Megawatt
+                    if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(WATT).getConverterTo(SI.MetricPrefix.KILO(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(WATT)).doubleValue(SI.MetricPrefix.KILO(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(WATT).getConverterTo(WATT);
+                        val1 = ut.convert(Measure.valueOf(val1, WATT).doubleValue(WATT));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(WATT).getConverterTo(SI.MetricPrefix.MILLI(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(WATT)).doubleValue(SI.MetricPrefix.MILLI(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(WATT).getConverterTo(HORSEPOWER);
+                        val1 = ut.convert(Measure.valueOf(val1, HORSEPOWER).doubleValue(HORSEPOWER));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    // Kilowatt to...
+                    if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(WATT).getConverterTo(SI.MetricPrefix.MEGA(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(WATT)).doubleValue(SI.MetricPrefix.MEGA(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(WATT).getConverterTo(WATT);
+                        val1 = ut.convert(Measure.valueOf(val1, WATT).doubleValue(WATT));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(WATT).getConverterTo(SI.MetricPrefix.MILLI(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(WATT)).doubleValue(SI.MetricPrefix.MILLI(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(WATT).getConverterTo(HORSEPOWER);
+                        val1 = ut.convert(Measure.valueOf(val1, HORSEPOWER).doubleValue(HORSEPOWER));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Megawatt to...
+                    if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = WATT.getConverterTo(SI.MetricPrefix.MEGA(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(WATT)).doubleValue(SI.MetricPrefix.MEGA(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = WATT.getConverterTo(SI.MetricPrefix.KILO(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(WATT)).doubleValue(SI.MetricPrefix.KILO(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = WATT.getConverterTo(SI.MetricPrefix.MILLI(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(WATT)).doubleValue(SI.MetricPrefix.MILLI(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = WATT.getConverterTo(HORSEPOWER);
+                        val1 = ut.convert(Measure.valueOf(val1, HORSEPOWER).doubleValue(HORSEPOWER));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Milliwatt to...
+                    if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(WATT).getConverterTo(SI.MetricPrefix.MEGA(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(WATT)).doubleValue(SI.MetricPrefix.MEGA(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(WATT).getConverterTo(SI.MetricPrefix.KILO(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(WATT)).doubleValue(SI.MetricPrefix.KILO(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(WATT).getConverterTo(WATT);
+                        val1 = ut.convert(Measure.valueOf(val1, WATT).doubleValue(WATT));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MILLI(WATT).getConverterTo(HORSEPOWER);
+                        val1 = ut.convert(Measure.valueOf(val1, HORSEPOWER).doubleValue(HORSEPOWER));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Horsepower to...
+                    if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = HORSEPOWER.getConverterTo(SI.MetricPrefix.MEGA(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(WATT)).doubleValue(SI.MetricPrefix.MEGA(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = HORSEPOWER.getConverterTo(SI.MetricPrefix.KILO(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(WATT)).doubleValue(SI.MetricPrefix.KILO(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = HORSEPOWER.getConverterTo(WATT);
+                        val1 = ut.convert(Measure.valueOf(val1, WATT).doubleValue(WATT));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = HORSEPOWER.getConverterTo(SI.MetricPrefix.MILLI(WATT));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MILLI(WATT)).doubleValue(SI.MetricPrefix.MILLI(WATT)));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+
+                }
+            }
+        });
+
     }
 
     public void uisetup() {
@@ -69,6 +219,7 @@ public class PowerActivity extends AppCompatActivity
         info = findViewById(R.id.powerInfoTV);
         result = findViewById(R.id.powerResultTV);
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
