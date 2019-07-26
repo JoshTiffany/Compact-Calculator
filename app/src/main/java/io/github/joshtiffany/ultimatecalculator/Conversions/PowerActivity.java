@@ -2,8 +2,6 @@ package io.github.joshtiffany.ultimatecalculator.Conversions;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -28,11 +26,7 @@ import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
-import static javax.measure.unit.NonSI.CUBIC_INCH;
-import static javax.measure.unit.NonSI.GALLON_LIQUID_US;
 import static javax.measure.unit.NonSI.HORSEPOWER;
-import static javax.measure.unit.NonSI.LITRE;
-import static javax.measure.unit.SI.CUBIC_METRE;
 import static javax.measure.unit.SI.WATT;
 
 public class PowerActivity extends AppCompatActivity
@@ -97,6 +91,7 @@ public class PowerActivity extends AppCompatActivity
                         ut = SI.MetricPrefix.MEGA(WATT).getConverterTo(HORSEPOWER);
                         val1 = ut.convert(Measure.valueOf(val1, HORSEPOWER).doubleValue(HORSEPOWER));
                         result.setText(String.valueOf(val1));
+
 
                     }
 
@@ -213,11 +208,11 @@ public class PowerActivity extends AppCompatActivity
     }
 
     public void uisetup() {
-        calc = findViewById(R.id.powerCalcBTN);
-        infospinner = findViewById(R.id.powerInfoSpinner);
-        resultspinner = findViewById(R.id.powerResultSpinner);
-        info = findViewById(R.id.powerInfoTV);
-        result = findViewById(R.id.powerResultTV);
+        calc = findViewById(R.id.pressureCalcBTN);
+        infospinner = findViewById(R.id.pressureInfoSpinner);
+        resultspinner = findViewById(R.id.pressureResultSpinner);
+        info = findViewById(R.id.pressureInfoTV);
+        result = findViewById(R.id.pressureResultTV);
     }
 
     @Override
@@ -285,8 +280,8 @@ public class PowerActivity extends AppCompatActivity
         } else if (id == R.id.nav_weight) {
             Intent startintent = new Intent(getApplicationContext(), WeightActivty.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_power) {
-            Intent startintent = new Intent(getApplicationContext(), PowerActivity.class);
+        } else if (id == R.id.nav_pressure) {
+            Intent startintent = new Intent(getApplicationContext(), Pressure.class);
             startActivity(startintent);
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

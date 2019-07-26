@@ -436,6 +436,9 @@ public class WeightActivty extends AppCompatActivity
         } else if (id == R.id.nav_power) {
             Intent startintent = new Intent(getApplicationContext(), PowerActivity.class);
             startActivity(startintent);
+        } else if (id == R.id.nav_pressure) {
+            Intent startintent = new Intent(getApplicationContext(), Pressure.class);
+            startActivity(startintent);
         }
 
 

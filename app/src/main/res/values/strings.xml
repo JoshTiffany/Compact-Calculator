@@ -145,6 +145,25 @@
         <item>Milliwatt</item>
         <item>Horse Power</item>
     </string-array>
+
+    <string-array name="pressure1">
+        <item>Megapascal</item>
+        <item>Kilopascal</item>
+        <item>Pascal</item>
+        <item>Bar</item>
+        <item>Atmosphere</item>
+        <item>Millimeter of Mercury</item>
+        <item>Inch of Mercury</item>
+    </string-array>
+    <string-array name="pressure2">
+        <item>Megapascal</item>
+        <item>Kilopascal</item>
+        <item>Pascal</item>
+        <item>Bar</item>
+        <item>Atmosphere</item>
+        <item>Millimeter of Mercury</item>
+        <item>Inch of Mercury</item>
+    </string-array>
     <string name="title_activity_time">TimeActivity</string>
     <string name="title_activity_speed">SpeedActivity</string>
     <string name="title_activity_volume">VolumeActivity</string>
@@ -166,4 +185,5 @@
     <string name="Weight">Weight</string>
     <string name="title_activity_power">PowerActivity</string>
     <string name="Power">Power</string>
+    <string name="title_activity_pressure">Pressure</string>
 </resources>

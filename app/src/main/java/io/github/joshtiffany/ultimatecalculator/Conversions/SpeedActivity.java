@@ -166,6 +166,7 @@ public class SpeedActivity extends AppCompatActivity
                         val1 = ut.convert(Measure.valueOf(val1, MILES_PER_HOUR).doubleValue(MILES_PER_HOUR));
                         result.setText(String.valueOf(val1));
 
+
                     }
 
 
@@ -251,6 +252,9 @@ public class SpeedActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_power) {
             Intent startintent = new Intent(getApplicationContext(), PowerActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_pressure) {
+            Intent startintent = new Intent(getApplicationContext(), Pressure.class);
             startActivity(startintent);
         }
 
