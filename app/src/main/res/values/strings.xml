@@ -164,6 +164,24 @@
         <item>Millimeter of Mercury</item>
         <item>Inch of Mercury</item>
     </string-array>
+    <string-array name="energy1">
+        <item>Megajoule</item>
+        <item>Kilojoule</item>
+        <item>Joule</item>
+        <item>Erg</item>
+        <item>Electronvolt</item>
+        <item>Kilowatt</item>
+        <item>Watt</item>
+    </string-array>
+    <string-array name="energy2">
+        <item>Megajoule</item>
+        <item>Kilojoule</item>
+        <item>Joule</item>
+        <item>Erg</item>
+        <item>Electronvolt</item>
+        <item>Kilowatt</item>
+        <item>Watt</item>
+    </string-array>
     <string name="title_activity_time">TimeActivity</string>
     <string name="title_activity_speed">SpeedActivity</string>
     <string name="title_activity_volume">VolumeActivity</string>
@@ -186,4 +204,6 @@
     <string name="title_activity_power">PowerActivity</string>
     <string name="Power">Power</string>
     <string name="title_activity_pressure">Pressure</string>
+    <string name="title_activity_energy">EnergyActivity</string>
+    <string name="Energy">Energy</string>
 </resources>

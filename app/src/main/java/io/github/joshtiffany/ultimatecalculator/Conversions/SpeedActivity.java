@@ -256,6 +256,9 @@ public class SpeedActivity extends AppCompatActivity
         } else if (id == R.id.nav_pressure) {
             Intent startintent = new Intent(getApplicationContext(), Pressure.class);
             startActivity(startintent);
+        } else if (id == R.id.nav_energy) {
+            Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
+            startActivity(startintent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

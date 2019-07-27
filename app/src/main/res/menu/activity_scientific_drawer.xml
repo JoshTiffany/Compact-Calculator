@@ -56,6 +56,10 @@
                 android:id="@+id/nav_pressure"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Pressure" />
+            <item
+                android:id="@+id/nav_energy"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/Energy" />
         </menu>
     </item>
 

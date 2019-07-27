@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Conversions.EnergyActivity"
+            android:label="@string/title_activity_energy"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Conversions.Pressure"
             android:label="@string/title_activity_pressure"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Conversions.PowerActivity"
             android:label="@string/title_activity_power"

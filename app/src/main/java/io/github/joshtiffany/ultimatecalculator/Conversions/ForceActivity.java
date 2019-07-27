@@ -2,8 +2,6 @@ package io.github.joshtiffany.ultimatecalculator.Conversions;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -28,12 +26,8 @@ import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
 import static javax.measure.unit.NonSI.DYNE;
-import static javax.measure.unit.NonSI.FEET_PER_SECOND;
 import static javax.measure.unit.NonSI.KILOGRAM_FORCE;
-import static javax.measure.unit.NonSI.KILOMETRES_PER_HOUR;
-import static javax.measure.unit.NonSI.MILES_PER_HOUR;
 import static javax.measure.unit.NonSI.POUND_FORCE;
-import static javax.measure.unit.SI.METRES_PER_SECOND;
 import static javax.measure.unit.SI.NEWTON;
 
 public class ForceActivity extends AppCompatActivity
@@ -167,11 +161,11 @@ public class ForceActivity extends AppCompatActivity
     }
 
     public void uisetup() {
-        calc = findViewById(R.id.forceCalcBTN);
-        infospinner = findViewById(R.id.forceInfoSpinner);
-        resultspinner = findViewById(R.id.forceResultSpinner);
-        result = findViewById(R.id.forceResultTV);
-        info = findViewById(R.id.forceInfoTV);
+        calc = findViewById(R.id.energyCalcBTN);
+        infospinner = findViewById(R.id.energyInfoSpinner);
+        resultspinner = findViewById(R.id.energyResultSpinner);
+        result = findViewById(R.id.energyResultTV);
+        info = findViewById(R.id.energyInfoTV);
     }
 
     @Override
@@ -244,6 +238,9 @@ public class ForceActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_pressure) {
             Intent startintent = new Intent(getApplicationContext(), Pressure.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_energy) {
+            Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
             startActivity(startintent);
         }
 

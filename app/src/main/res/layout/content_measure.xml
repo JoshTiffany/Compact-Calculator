@@ -9,7 +9,7 @@
     tools:showIn="@layout/app_bar_measure">
 
     <EditText
-        android:id="@+id/forceInfoTV"
+        android:id="@+id/energyInfoTV"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="36dp"
@@ -27,11 +27,11 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forceInfoTV" />
+        app:layout_constraintTop_toBottomOf="@+id/energyInfoTV" />
 
 
     <TextView
-        android:id="@+id/forceResultTV"
+        android:id="@+id/energyResultTV"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="179dp"
@@ -43,22 +43,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/forceInfoSpinner"
+        android:id="@+id/energyInfoSpinner"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forceInfoTV" />
+        app:layout_constraintTop_toBottomOf="@+id/energyInfoTV" />
 
     <Spinner
-        android:id="@+id/forceResultSpinner"
+        android:id="@+id/energyResultSpinner"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forceResultTV" />
+        app:layout_constraintTop_toBottomOf="@+id/energyResultTV" />
 
     <TextView
         android:id="@+id/textView2"
@@ -71,12 +71,12 @@
         android:layout_marginRight="32dp"
         android:text="="
         android:textSize="50sp"
-        app:layout_constraintEnd_toStartOf="@+id/forceResultTV"
-        app:layout_constraintStart_toEndOf="@+id/forceInfoTV"
+        app:layout_constraintEnd_toStartOf="@+id/energyResultTV"
+        app:layout_constraintStart_toEndOf="@+id/energyInfoTV"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/forceCalcBTN"
+        android:id="@+id/energyCalcBTN"
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:layout_marginTop="92dp"

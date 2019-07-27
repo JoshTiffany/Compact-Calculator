@@ -18,6 +18,7 @@ import com.google.common.math.BigIntegerMath;
 
 import java.text.DecimalFormat;
 
+import io.github.joshtiffany.ultimatecalculator.Conversions.EnergyActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.ForceActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.MeasureActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.PowerActivity;
@@ -660,6 +661,9 @@ public class ScientificActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_pressure) {
             Intent startintent = new Intent(getApplicationContext(), Pressure.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_energy) {
+            Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
             startActivity(startintent);
         }
 

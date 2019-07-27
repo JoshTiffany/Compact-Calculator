@@ -1070,11 +1070,11 @@ public class MeasureActivity extends AppCompatActivity
     }
 
     public void uiSetup() {
-        calc = findViewById(R.id.forceCalcBTN);
-        resultspinner = findViewById(R.id.forceResultSpinner);
-        infospinner = findViewById(R.id.forceInfoSpinner);
-        info = findViewById(R.id.forceInfoTV);
-        result = findViewById(R.id.forceResultTV);
+        calc = findViewById(R.id.energyCalcBTN);
+        resultspinner = findViewById(R.id.energyResultSpinner);
+        infospinner = findViewById(R.id.energyInfoSpinner);
+        info = findViewById(R.id.energyInfoTV);
+        result = findViewById(R.id.energyResultTV);
     }
 
 
@@ -1148,6 +1148,9 @@ public class MeasureActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_pressure) {
             Intent startintent = new Intent(getApplicationContext(), Pressure.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_energy) {
+            Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
             startActivity(startintent);
         }
 

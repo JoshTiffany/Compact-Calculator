@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
+import javax.measure.unit.NonSI;
 import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
@@ -84,7 +85,6 @@ public class Pressure extends AppCompatActivity
                         ut = SI.MetricPrefix.MEGA(PASCAL).getConverterTo(SI.MetricPrefix.KILO(PASCAL));
                         val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(PASCAL)).doubleValue(SI.MetricPrefix.KILO(PASCAL)));
                         result.setText(String.valueOf(val1));
-
 
                     } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
                         val1 = Double.parseDouble(info.getText().toString());
