@@ -20,11 +20,24 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
+import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
+
+import static javax.measure.unit.NonSI.ATMOSPHERE;
+import static javax.measure.unit.NonSI.BAR;
+import static javax.measure.unit.NonSI.INCH_OF_MERCURY;
+import static javax.measure.unit.NonSI.METRIC_TON;
+import static javax.measure.unit.NonSI.MILLIMETRE_OF_MERCURY;
+import static javax.measure.unit.NonSI.OUNCE;
+import static javax.measure.unit.NonSI.POUND;
+import static javax.measure.unit.SI.GRAM;
+import static javax.measure.unit.SI.KILOGRAM;
+import static javax.measure.unit.SI.PASCAL;
 
 public class Pressure extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -59,6 +72,285 @@ public class Pressure extends AppCompatActivity
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         resultspinner.setAdapter(adapter2);
 
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (info.getText().length() > 0) {
+
+                    // Megapascal to...
+                    if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(PASCAL).getConverterTo(SI.MetricPrefix.KILO(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(PASCAL)).doubleValue(SI.MetricPrefix.KILO(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(PASCAL).getConverterTo(PASCAL);
+                        val1 = ut.convert(Measure.valueOf(val1, PASCAL).doubleValue(PASCAL));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(PASCAL).getConverterTo(BAR);
+                        val1 = ut.convert(Measure.valueOf(val1, BAR).doubleValue(BAR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(PASCAL).getConverterTo(ATMOSPHERE);
+                        val1 = ut.convert(Measure.valueOf(val1, ATMOSPHERE).doubleValue(ATMOSPHERE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(PASCAL).getConverterTo(MILLIMETRE_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE_OF_MERCURY).doubleValue(MILLIMETRE_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(PASCAL).getConverterTo(INCH_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH_OF_MERCURY).doubleValue(INCH_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+
+                    // Kilopascal to...
+                    if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(PASCAL).getConverterTo(SI.MetricPrefix.MEGA(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(PASCAL)).doubleValue(SI.MetricPrefix.MEGA(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(PASCAL).getConverterTo(PASCAL);
+                        val1 = ut.convert(Measure.valueOf(val1, PASCAL).doubleValue(PASCAL));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(PASCAL).getConverterTo(BAR);
+                        val1 = ut.convert(Measure.valueOf(val1, BAR).doubleValue(BAR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(PASCAL).getConverterTo(ATMOSPHERE);
+                        val1 = ut.convert(Measure.valueOf(val1, ATMOSPHERE).doubleValue(ATMOSPHERE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(PASCAL).getConverterTo(MILLIMETRE_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE_OF_MERCURY).doubleValue(MILLIMETRE_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(PASCAL).getConverterTo(INCH_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH_OF_MERCURY).doubleValue(INCH_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Pascal to...
+                    if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = PASCAL.getConverterTo(SI.MetricPrefix.MEGA(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1,SI.MetricPrefix.MEGA(PASCAL)).doubleValue(SI.MetricPrefix.MEGA(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = PASCAL.getConverterTo( SI.MetricPrefix.KILO(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1,  SI.MetricPrefix.KILO(PASCAL)).doubleValue( SI.MetricPrefix.KILO(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = PASCAL.getConverterTo(BAR);
+                        val1 = ut.convert(Measure.valueOf(val1, BAR).doubleValue(BAR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = PASCAL.getConverterTo(ATMOSPHERE);
+                        val1 = ut.convert(Measure.valueOf(val1, ATMOSPHERE).doubleValue(ATMOSPHERE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = PASCAL.getConverterTo(MILLIMETRE_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE_OF_MERCURY).doubleValue(MILLIMETRE_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = PASCAL.getConverterTo(INCH_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH_OF_MERCURY).doubleValue(INCH_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Bar to...
+                    if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = BAR.getConverterTo(SI.MetricPrefix.MEGA(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(PASCAL)).doubleValue(SI.MetricPrefix.MEGA(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = BAR.getConverterTo(SI.MetricPrefix.KILO(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(PASCAL)).doubleValue(SI.MetricPrefix.KILO(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = BAR.getConverterTo(PASCAL);
+                        val1 = ut.convert(Measure.valueOf(val1, PASCAL).doubleValue(PASCAL));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = BAR.getConverterTo(ATMOSPHERE);
+                        val1 = ut.convert(Measure.valueOf(val1, ATMOSPHERE).doubleValue(ATMOSPHERE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = BAR.getConverterTo(MILLIMETRE_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE_OF_MERCURY).doubleValue(MILLIMETRE_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = BAR.getConverterTo(INCH_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH_OF_MERCURY).doubleValue(INCH_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Atmosphere to...
+                    if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ATMOSPHERE.getConverterTo(SI.MetricPrefix.MEGA(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(PASCAL)).doubleValue(SI.MetricPrefix.MEGA(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ATMOSPHERE.getConverterTo(SI.MetricPrefix.KILO(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(PASCAL)).doubleValue(SI.MetricPrefix.KILO(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ATMOSPHERE.getConverterTo(PASCAL);
+                        val1 = ut.convert(Measure.valueOf(val1, PASCAL).doubleValue(PASCAL));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ATMOSPHERE.getConverterTo(BAR);
+                        val1 = ut.convert(Measure.valueOf(val1, BAR).doubleValue(BAR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ATMOSPHERE.getConverterTo(ATMOSPHERE);
+                        val1 = ut.convert(Measure.valueOf(val1, ATMOSPHERE).doubleValue(ATMOSPHERE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ATMOSPHERE.getConverterTo(INCH_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH_OF_MERCURY).doubleValue(INCH_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    //Millimeter of Mercury to...
+                    if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILLIMETRE_OF_MERCURY.getConverterTo(SI.MetricPrefix.MEGA(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(PASCAL)).doubleValue(SI.MetricPrefix.MEGA(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILLIMETRE_OF_MERCURY.getConverterTo(SI.MetricPrefix.KILO(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(PASCAL)).doubleValue(SI.MetricPrefix.KILO(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILLIMETRE_OF_MERCURY.getConverterTo(PASCAL);
+                        val1 = ut.convert(Measure.valueOf(val1, PASCAL).doubleValue(PASCAL));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILLIMETRE_OF_MERCURY.getConverterTo(BAR);
+                        val1 = ut.convert(Measure.valueOf(val1, BAR).doubleValue(BAR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILLIMETRE_OF_MERCURY.getConverterTo(ATMOSPHERE);
+                        val1 = ut.convert(Measure.valueOf(val1, ATMOSPHERE).doubleValue(ATMOSPHERE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 5 && resultspinner.getSelectedItemId() == 6) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MILLIMETRE_OF_MERCURY.getConverterTo(INCH_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, INCH_OF_MERCURY).doubleValue(INCH_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    // Inch of Mercury to...
+                    if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = INCH_OF_MERCURY.getConverterTo(SI.MetricPrefix.MEGA(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(PASCAL)).doubleValue(SI.MetricPrefix.MEGA(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = INCH_OF_MERCURY.getConverterTo(SI.MetricPrefix.KILO(PASCAL));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(PASCAL)).doubleValue(SI.MetricPrefix.KILO(PASCAL)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = INCH_OF_MERCURY.getConverterTo(PASCAL);
+                        val1 = ut.convert(Measure.valueOf(val1, PASCAL).doubleValue(PASCAL));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = INCH_OF_MERCURY.getConverterTo(BAR);
+                        val1 = ut.convert(Measure.valueOf(val1, BAR).doubleValue(BAR));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = INCH_OF_MERCURY.getConverterTo(ATMOSPHERE);
+                        val1 = ut.convert(Measure.valueOf(val1, ATMOSPHERE).doubleValue(ATMOSPHERE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 6 && resultspinner.getSelectedItemId() == 5) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = INCH_OF_MERCURY.getConverterTo(MILLIMETRE_OF_MERCURY);
+                        val1 = ut.convert(Measure.valueOf(val1, MILLIMETRE_OF_MERCURY).doubleValue(MILLIMETRE_OF_MERCURY));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                }
+            }
+        });
 
     }
 
