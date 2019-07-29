@@ -20,11 +20,27 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import javax.measure.Measure;
+import javax.measure.converter.ConversionException;
 import javax.measure.converter.UnitConverter;
+import javax.measure.quantity.Energy;
+import javax.measure.quantity.Wavenumber;
+import javax.measure.unit.NonSI;
+import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
+
+import static javax.measure.unit.NonSI.ATMOSPHERE;
+import static javax.measure.unit.NonSI.BAR;
+import static javax.measure.unit.NonSI.ELECTRON_VOLT;
+import static javax.measure.unit.NonSI.ERG;
+import static javax.measure.unit.NonSI.INCH_OF_MERCURY;
+import static javax.measure.unit.NonSI.MILLIMETRE_OF_MERCURY;
+import static javax.measure.unit.SI.JOULE;
+import static javax.measure.unit.SI.PASCAL;
+import static javax.measure.unit.SI.WATT;
 
 public class EnergyActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,6 +51,7 @@ public class EnergyActivity extends AppCompatActivity
     private TextView result;
     private double val1;
     private UnitConverter ut;
+    private boolean val2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +76,149 @@ public class EnergyActivity extends AppCompatActivity
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         resultspinner.setAdapter(adapter2);
 
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (info.getText().length() > 0) {
+
+
+                    // Megapascal to...
+                    if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(JOULE).getConverterTo(SI.MetricPrefix.KILO(JOULE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(JOULE)).doubleValue(SI.MetricPrefix.KILO(JOULE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(JOULE).getConverterTo(JOULE);
+                        val1 = ut.convert(Measure.valueOf(val1, JOULE).doubleValue(JOULE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(JOULE).getConverterTo(ERG);
+                        val1 = ut.convert(Measure.valueOf(val1, ERG).doubleValue(ERG));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.MEGA(JOULE).getConverterTo(ELECTRON_VOLT);
+                        val1 = ut.convert(Measure.valueOf(val1, ELECTRON_VOLT).doubleValue(ELECTRON_VOLT));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+
+                    // Kilopascal to...
+                    if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(JOULE).getConverterTo(SI.MetricPrefix.MEGA(JOULE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(JOULE)).doubleValue(SI.MetricPrefix.MEGA(JOULE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(JOULE).getConverterTo(JOULE);
+                        val1 = ut.convert(Measure.valueOf(val1, JOULE).doubleValue(JOULE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(JOULE).getConverterTo(ERG);
+                        val1 = ut.convert(Measure.valueOf(val1, ERG).doubleValue(ERG));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SI.MetricPrefix.KILO(JOULE).getConverterTo(ELECTRON_VOLT);
+                        val1 = ut.convert(Measure.valueOf(val1, ELECTRON_VOLT).doubleValue(ELECTRON_VOLT));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Pascal to...
+                    if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = JOULE.getConverterTo(SI.MetricPrefix.MEGA(JOULE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(JOULE)).doubleValue(SI.MetricPrefix.MEGA(JOULE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = JOULE.getConverterTo(SI.MetricPrefix.KILO(JOULE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(JOULE)).doubleValue(SI.MetricPrefix.KILO(JOULE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = JOULE.getConverterTo(ERG);
+                        val1 = ut.convert(Measure.valueOf(val1, ERG).doubleValue(ERG));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = JOULE.getConverterTo(ELECTRON_VOLT);
+                        val1 = ut.convert(Measure.valueOf(val1, ELECTRON_VOLT).doubleValue(ELECTRON_VOLT));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Bar to...
+                    if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ERG.getConverterTo(SI.MetricPrefix.MEGA(JOULE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(JOULE)).doubleValue(SI.MetricPrefix.MEGA(JOULE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ERG.getConverterTo(SI.MetricPrefix.KILO(JOULE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(JOULE)).doubleValue(SI.MetricPrefix.KILO(JOULE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ERG.getConverterTo(JOULE);
+                        val1 = ut.convert(Measure.valueOf(val1, JOULE).doubleValue(JOULE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 4) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ERG.getConverterTo(ELECTRON_VOLT);
+                        val1 = ut.convert(Measure.valueOf(val1, ELECTRON_VOLT).doubleValue(ELECTRON_VOLT));
+                        result.setText(String.valueOf(val1));
+
+                    }
+                    // Atmosphere to...
+                    if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ELECTRON_VOLT.getConverterTo(SI.MetricPrefix.MEGA(JOULE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.MEGA(JOULE)).doubleValue(SI.MetricPrefix.MEGA(JOULE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ELECTRON_VOLT.getConverterTo(SI.MetricPrefix.KILO(JOULE));
+                        val1 = ut.convert(Measure.valueOf(val1, SI.MetricPrefix.KILO(JOULE)).doubleValue(SI.MetricPrefix.KILO(JOULE)));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ELECTRON_VOLT.getConverterTo(ERG);
+                        val1 = ut.convert(Measure.valueOf(val1, ERG).doubleValue(ERG));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 4 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = ELECTRON_VOLT.getConverterTo(ELECTRON_VOLT);
+                        val1 = ut.convert(Measure.valueOf(val1, ELECTRON_VOLT).doubleValue(ELECTRON_VOLT));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                }
+            }
+        });
 
     }
 
@@ -69,6 +229,7 @@ public class EnergyActivity extends AppCompatActivity
         info = findViewById(R.id.energyInfoTV);
         result = findViewById(R.id.energyResultTV);
     }
+
 
     @Override
     public void onBackPressed() {

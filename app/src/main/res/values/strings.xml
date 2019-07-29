@@ -170,8 +170,6 @@
         <item>Joule</item>
         <item>Erg</item>
         <item>Electronvolt</item>
-        <item>Kilowatt</item>
-        <item>Watt</item>
     </string-array>
     <string-array name="energy2">
         <item>Megajoule</item>
@@ -179,8 +177,6 @@
         <item>Joule</item>
         <item>Erg</item>
         <item>Electronvolt</item>
-        <item>Kilowatt</item>
-        <item>Watt</item>
     </string-array>
     <string name="title_activity_time">TimeActivity</string>
     <string name="title_activity_speed">SpeedActivity</string>
