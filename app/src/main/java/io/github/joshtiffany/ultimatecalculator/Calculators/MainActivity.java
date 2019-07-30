@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
+import io.github.joshtiffany.ultimatecalculator.Conversions.AngleActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.EnergyActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.ForceActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.MeasureActivity;
@@ -427,10 +428,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
 
-        if (id == R.id.nav_first_layout) {
+        if (id == R.id.nav_standard) {
             Intent startintent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_second_layout) {
+        } else if (id == R.id.nav_scientific) {
             Intent startintent = new Intent(getApplicationContext(), ScientificActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_share) {
@@ -462,6 +463,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_energy) {
             Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_angle) {
+            Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
             startActivity(startintent);
         }
 

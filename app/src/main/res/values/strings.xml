@@ -178,6 +178,18 @@
         <item>Erg</item>
         <item>Electronvolt</item>
     </string-array>
+    <string-array name="angle1">
+        <item>Radian</item>
+        <item>Degree</item>
+        <item>Minute</item>
+        <item>Second</item>
+    </string-array>
+    <string-array name="angle2">
+        <item>Radian</item>
+        <item>Degree</item>
+        <item>Minute</item>
+        <item>Second</item>
+    </string-array>
     <string name="title_activity_time">TimeActivity</string>
     <string name="title_activity_speed">SpeedActivity</string>
     <string name="title_activity_volume">VolumeActivity</string>
@@ -202,4 +214,6 @@
     <string name="title_activity_pressure">Pressure</string>
     <string name="title_activity_energy">EnergyActivity</string>
     <string name="Energy">Energy</string>
+    <string name="title_activity_angle">AngleActivity</string>
+    <string name="Angle">Angle</string>
 </resources>

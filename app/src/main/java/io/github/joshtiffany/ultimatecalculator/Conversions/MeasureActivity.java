@@ -1070,11 +1070,11 @@ public class MeasureActivity extends AppCompatActivity
     }
 
     public void uiSetup() {
-        calc = findViewById(R.id.energyCalcBTN);
-        resultspinner = findViewById(R.id.energyResultSpinner);
-        infospinner = findViewById(R.id.energyInfoSpinner);
-        info = findViewById(R.id.energyInfoTV);
-        result = findViewById(R.id.energyResultTV);
+        calc = findViewById(R.id.measureCalcBTN);
+        resultspinner = findViewById(R.id.measureResultSpinner);
+        infospinner = findViewById(R.id.measureInfoSpinner);
+        info = findViewById(R.id.measureInfoTV);
+        result = findViewById(R.id.measureResultTV);
     }
 
 
@@ -1116,10 +1116,10 @@ public class MeasureActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        if (id == R.id.nav_standard) {
             Intent startintent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_scientific) {
             Intent startintent = new Intent(getApplicationContext(), ScientificActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_share) {
@@ -1151,6 +1151,9 @@ public class MeasureActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_energy) {
             Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_angle) {
+            Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
             startActivity(startintent);
         }
 

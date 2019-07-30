@@ -58,6 +58,10 @@
                 android:id="@+id/nav_energy"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/Energy" />
+            <item
+                android:id="@+id/nav_angle"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/Angle" />
         </menu>
     </item>
 

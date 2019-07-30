@@ -8,78 +8,69 @@
     tools:context=".Conversions.ForceActivity"
     tools:showIn="@layout/app_bar_force">
 
-    <Spinner
-        android:id="@+id/energyResultSpinner"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/energyResultTV" />
-
-    <Button
-        android:id="@+id/energyCalcBTN"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="92dp"
-        android:text="Calculate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/energyResultTV"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="179dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/energyInfoSpinner"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/energyInfoTV" />
-
     <TextView
         android:id="@+id/textView7"
         android:layout_width="25dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="179dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="="
         android:textSize="50sp"
-        app:layout_constraintEnd_toStartOf="@+id/energyResultTV"
-        app:layout_constraintHorizontal_bias="0.702"
-        app:layout_constraintStart_toEndOf="@+id/energyInfoTV"
+        app:layout_constraintEnd_toStartOf="@+id/forceResultTV"
+        app:layout_constraintStart_toEndOf="@+id/forceInfoTV"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/energyInfoTV"
+        android:id="@+id/forceInfoTV"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
         android:layout_marginTop="179dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/forceInfoSpinner"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forceInfoTV" />
+
+    <TextView
+        android:id="@+id/forceResultTV"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="179dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/forceResultSpinner"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forceResultTV" />
+
+    <Button
+        android:id="@+id/forceCalcBTN"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="92dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
 </android.support.constraint.ConstraintLayout>

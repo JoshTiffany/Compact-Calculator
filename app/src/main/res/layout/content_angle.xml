@@ -5,26 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Conversions.EnergyActivity"
-    tools:showIn="@layout/app_bar_energy">
+    tools:context=".Conversions.AngleActivity"
+    tools:showIn="@layout/app_bar_angle">
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView12"
         android:layout_width="25dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="179dp"
+        android:layout_marginTop="176dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="="
         android:textSize="50sp"
-        app:layout_constraintEnd_toStartOf="@+id/energyResultTV"
-        app:layout_constraintStart_toEndOf="@+id/energyInfoTV"
+        app:layout_constraintEnd_toStartOf="@+id/angleResultTV"
+        app:layout_constraintStart_toEndOf="@+id/angleInfoTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/angleCalcBTN"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="92dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/angleResultTV"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="179dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/energyInfoTV"
+        android:id="@+id/angleInfoTV"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="36dp"
@@ -36,42 +56,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/energyInfoSpinner"
+        android:id="@+id/angleInfoSpinner"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/energyInfoTV" />
+        app:layout_constraintTop_toBottomOf="@+id/angleInfoTV" />
 
     <Spinner
-        android:id="@+id/energyResultSpinner"
+        android:id="@+id/angleResultSpinner"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/energyResultTV" />
-
-    <TextView
-        android:id="@+id/energyResultTV"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="179dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/energyCalcBTN"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="92dp"
-        android:text="Calculate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/angleResultTV" />
 
 </android.support.constraint.ConstraintLayout>

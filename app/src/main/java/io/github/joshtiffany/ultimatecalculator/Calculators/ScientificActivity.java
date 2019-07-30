@@ -18,6 +18,7 @@ import com.google.common.math.BigIntegerMath;
 
 import java.text.DecimalFormat;
 
+import io.github.joshtiffany.ultimatecalculator.Conversions.AngleActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.EnergyActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.ForceActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.MeasureActivity;
@@ -665,8 +666,10 @@ public class ScientificActivity extends AppCompatActivity
         } else if (id == R.id.nav_energy) {
             Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
             startActivity(startintent);
+        } else if (id == R.id.nav_angle) {
+            Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
+            startActivity(startintent);
         }
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

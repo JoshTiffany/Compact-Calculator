@@ -161,11 +161,11 @@ public class ForceActivity extends AppCompatActivity
     }
 
     public void uisetup() {
-        calc = findViewById(R.id.energyCalcBTN);
-        infospinner = findViewById(R.id.energyInfoSpinner);
-        resultspinner = findViewById(R.id.energyResultSpinner);
-        result = findViewById(R.id.energyResultTV);
-        info = findViewById(R.id.energyInfoTV);
+        calc = findViewById(R.id.forceCalcBTN);
+        infospinner = findViewById(R.id.forceInfoSpinner);
+        resultspinner = findViewById(R.id.forceResultSpinner);
+        result = findViewById(R.id.forceResultTV);
+        info = findViewById(R.id.forceInfoTV);
     }
 
     @Override
@@ -206,10 +206,10 @@ public class ForceActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        if (id == R.id.nav_standard) {
             Intent startintent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_scientific) {
             Intent startintent = new Intent(getApplicationContext(), ScientificActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_share) {
@@ -221,10 +221,10 @@ public class ForceActivity extends AppCompatActivity
         } else if (id == R.id.nav_time) {
             Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_speed) {
+        } else if (id == R.id.speed) {
             Intent startintent = new Intent(getApplicationContext(), SpeedActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_volume) {
+        } else if (id == R.id.volume) {
             Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_force) {
@@ -241,6 +241,9 @@ public class ForceActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_energy) {
             Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_angle) {
+            Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
             startActivity(startintent);
         }
 

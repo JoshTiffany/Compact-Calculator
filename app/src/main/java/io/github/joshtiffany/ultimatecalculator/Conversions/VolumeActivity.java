@@ -333,10 +333,10 @@ public class VolumeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        if (id == R.id.nav_standard) {
             Intent startintent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_scientific) {
             Intent startintent = new Intent(getApplicationContext(), ScientificActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_share) {
@@ -368,6 +368,9 @@ public class VolumeActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_energy) {
             Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_angle) {
+            Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
             startActivity(startintent);
         }
 

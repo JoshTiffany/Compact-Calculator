@@ -2,8 +2,6 @@ package io.github.joshtiffany.ultimatecalculator.Conversions;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -21,26 +19,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import javax.measure.Measure;
-import javax.measure.converter.ConversionException;
 import javax.measure.converter.UnitConverter;
-import javax.measure.quantity.Energy;
-import javax.measure.quantity.Wavenumber;
-import javax.measure.unit.NonSI;
 import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
-import static javax.measure.unit.NonSI.ATMOSPHERE;
-import static javax.measure.unit.NonSI.BAR;
 import static javax.measure.unit.NonSI.ELECTRON_VOLT;
 import static javax.measure.unit.NonSI.ERG;
-import static javax.measure.unit.NonSI.INCH_OF_MERCURY;
-import static javax.measure.unit.NonSI.MILLIMETRE_OF_MERCURY;
 import static javax.measure.unit.SI.JOULE;
-import static javax.measure.unit.SI.PASCAL;
-import static javax.measure.unit.SI.WATT;
 
 public class EnergyActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -302,8 +290,8 @@ public class EnergyActivity extends AppCompatActivity
         } else if (id == R.id.nav_pressure) {
             Intent startintent = new Intent(getApplicationContext(), Pressure.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_energy) {
-            Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
+        } else if (id == R.id.nav_angle) {
+            Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
             startActivity(startintent);
         }
 
