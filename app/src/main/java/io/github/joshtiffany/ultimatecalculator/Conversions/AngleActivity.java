@@ -2,29 +2,32 @@ package io.github.joshtiffany.ultimatecalculator.Conversions;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
+
+import static javax.measure.unit.NonSI.DEGREE_ANGLE;
+import static javax.measure.unit.NonSI.MINUTE_ANGLE;
+import static javax.measure.unit.NonSI.SECOND_ANGLE;
+import static javax.measure.unit.SI.RADIAN;
 
 public class AngleActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -61,8 +64,103 @@ public class AngleActivity extends AppCompatActivity
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         resultspinner.setAdapter(adapter2);
 
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (info.getText().length() > 0) {
+                    // Radian to...
+                    if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = RADIAN.getConverterTo(DEGREE_ANGLE);
+                        val1 = ut.convert(Measure.valueOf(val1, DEGREE_ANGLE).doubleValue(DEGREE_ANGLE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = RADIAN.getConverterTo(MINUTE_ANGLE);
+                        val1 = ut.convert(Measure.valueOf(val1, MINUTE_ANGLE).doubleValue(MINUTE_ANGLE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 0 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = RADIAN.getConverterTo(SECOND_ANGLE);
+                        val1 = ut.convert(Measure.valueOf(val1, SECOND_ANGLE).doubleValue(SECOND_ANGLE));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    // Degree to...
+                    if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = DEGREE_ANGLE.getConverterTo(RADIAN);
+                        val1 = ut.convert(Measure.valueOf(val1, RADIAN).doubleValue(RADIAN));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = DEGREE_ANGLE.getConverterTo(MINUTE_ANGLE);
+                        val1 = ut.convert(Measure.valueOf(val1, MINUTE_ANGLE).doubleValue(MINUTE_ANGLE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 1 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = DEGREE_ANGLE.getConverterTo(SECOND_ANGLE);
+                        val1 = ut.convert(Measure.valueOf(val1, SECOND_ANGLE).doubleValue(SECOND_ANGLE));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+                    // Minute to...
+                    if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MINUTE_ANGLE.getConverterTo(RADIAN);
+                        val1 = ut.convert(Measure.valueOf(val1, RADIAN).doubleValue(RADIAN));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MINUTE_ANGLE.getConverterTo(DEGREE_ANGLE);
+                        val1 = ut.convert(Measure.valueOf(val1, DEGREE_ANGLE).doubleValue(DEGREE_ANGLE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 2 && resultspinner.getSelectedItemId() == 3) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = MINUTE_ANGLE.getConverterTo(SECOND_ANGLE);
+                        val1 = ut.convert(Measure.valueOf(val1, SECOND_ANGLE).doubleValue(SECOND_ANGLE));
+                        result.setText(String.valueOf(val1));
+
+
+                    }
+
+                    // Second to...
+                    if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 0) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SECOND_ANGLE.getConverterTo(RADIAN);
+                        val1 = ut.convert(Measure.valueOf(val1, RADIAN).doubleValue(RADIAN));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 1) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SECOND_ANGLE.getConverterTo(DEGREE_ANGLE);
+                        val1 = ut.convert(Measure.valueOf(val1, DEGREE_ANGLE).doubleValue(DEGREE_ANGLE));
+                        result.setText(String.valueOf(val1));
+
+                    } else if (infospinner.getSelectedItemId() == 3 && resultspinner.getSelectedItemId() == 2) {
+                        val1 = Double.parseDouble(info.getText().toString());
+                        ut = SECOND_ANGLE.getConverterTo(SECOND_ANGLE);
+                        val1 = ut.convert(Measure.valueOf(val1, SECOND_ANGLE).doubleValue(SECOND_ANGLE));
+                        result.setText(String.valueOf(val1));
+
+                    }
+
+
+                }
+            }
+        });
+
 
     }
+
 
     public void uisetup() {
         calc = findViewById(R.id.angleCalcBTN);

@@ -2,18 +2,15 @@ package io.github.joshtiffany.ultimatecalculator.Conversions;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +19,6 @@ import android.widget.TextView;
 
 import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
-import javax.measure.unit.NonSI;
 import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
@@ -32,12 +28,7 @@ import io.github.joshtiffany.ultimatecalculator.R;
 import static javax.measure.unit.NonSI.ATMOSPHERE;
 import static javax.measure.unit.NonSI.BAR;
 import static javax.measure.unit.NonSI.INCH_OF_MERCURY;
-import static javax.measure.unit.NonSI.METRIC_TON;
 import static javax.measure.unit.NonSI.MILLIMETRE_OF_MERCURY;
-import static javax.measure.unit.NonSI.OUNCE;
-import static javax.measure.unit.NonSI.POUND;
-import static javax.measure.unit.SI.GRAM;
-import static javax.measure.unit.SI.KILOGRAM;
 import static javax.measure.unit.SI.PASCAL;
 
 public class Pressure extends AppCompatActivity
@@ -415,10 +406,10 @@ public class Pressure extends AppCompatActivity
         } else if (id == R.id.nav_time) {
             Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.speed) {
+        } else if (id == R.id.nav_speed) {
             Intent startintent = new Intent(getApplicationContext(), SpeedActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.volume) {
+        } else if (id == R.id.nav_volume) {
             Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_force) {
