@@ -2,16 +2,15 @@ package io.github.joshtiffany.ultimatecalculator.Conversions;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -244,6 +243,9 @@ public class ForceActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_angle) {
             Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_digstorage) {
+            Intent startintent = new Intent(getApplicationContext(), DigStorageActivity.class);
             startActivity(startintent);
         }
 

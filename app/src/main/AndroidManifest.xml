@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Conversions.DigStorageActivity"
+            android:label="@string/title_activity_dig_storage"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Conversions.AngleActivity"
             android:label="@string/title_activity_angle"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Conversions.EnergyActivity"
             android:label="@string/title_activity_energy"

@@ -2,18 +2,15 @@ package io.github.joshtiffany.ultimatecalculator.Conversions;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,26 +19,15 @@ import android.widget.TextView;
 
 import javax.measure.Measure;
 import javax.measure.converter.UnitConverter;
-import javax.measure.quantity.Velocity;
-import javax.measure.unit.NonSI;
-import javax.measure.unit.SI;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
-import static javax.measure.unit.NonSI.DAY;
 import static javax.measure.unit.NonSI.FEET_PER_SECOND;
-import static javax.measure.unit.NonSI.HOUR;
 import static javax.measure.unit.NonSI.KILOMETRES_PER_HOUR;
-import static javax.measure.unit.NonSI.LITRE;
 import static javax.measure.unit.NonSI.MILES_PER_HOUR;
-import static javax.measure.unit.NonSI.MINUTE;
-import static javax.measure.unit.NonSI.PI;
-import static javax.measure.unit.NonSI.WEEK;
-import static javax.measure.unit.SI.CUBIC_METRE;
 import static javax.measure.unit.SI.METRES_PER_SECOND;
-import static javax.measure.unit.SI.SECOND;
 
 public class SpeedActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -261,6 +247,9 @@ public class SpeedActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_angle) {
             Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_digstorage) {
+            Intent startintent = new Intent(getApplicationContext(), DigStorageActivity.class);
             startActivity(startintent);
         }
 

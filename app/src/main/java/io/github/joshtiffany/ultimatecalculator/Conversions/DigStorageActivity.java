@@ -10,31 +10,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import javax.measure.converter.UnitConverter;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.Calculators.ScientificActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
-public class TempActivity extends AppCompatActivity
+public class DigStorageActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Button calc;
+    private Spinner infospinner, resultspinner;
     private EditText info;
     private TextView result;
-    private Button infoselc;
-    private Button resultselc;
-    private Button calc;
-    int temp;
-    int val1;
-
+    private double val1;
+    private UnitConverter ut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temp);
+        setContentView(R.layout.activity_dig_storage);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -44,72 +45,26 @@ public class TempActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        uisetup();
 
-        uiSetUp();
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.digStorage1, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        infospinner.setAdapter(adapter);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
+                R.array.digStorage2, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        resultspinner.setAdapter(adapter2);
 
-        calc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (info.getText().length() > 0) {
-                    if (infoselc.getTag().equals(0) && resultselc.getTag().equals(0)) {
-                        val1 = Integer.parseInt(info.getText().toString());
 
-                        temp = ((val1 - 32) * 5) / 9;
-                        result.setText(String.valueOf(temp));
-                    } else if (infoselc.getTag().equals(1) && resultselc.getTag().equals(1)) {
-                        val1 = Integer.parseInt(info.getText().toString());
-
-                        temp = (val1 * 9 / 5) + 32;
-                        result.setText(String.valueOf(temp));
-                    }
-                }
-
-            }
-        });
-        infoselc.setTag(0);
-        infoselc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final int status = (Integer) v.getTag();
-                switch (status) {
-                    case 0:
-                        v.setTag(1);
-                        infoselc.setText("°C");
-                        break;
-                    case 1:
-                        v.setTag(0);
-                        infoselc.setText("°F");
-                        break;
-                }
-            }
-        });
-
-        resultselc.setTag(0);
-        resultselc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final int status = (Integer) v.getTag();
-                switch (status) {
-                    case 0:
-                        v.setTag(1);
-                        resultselc.setText("°F");
-                        break;
-                    case 1:
-                        v.setTag(0);
-                        resultselc.setText("°C");
-                        break;
-                }
-            }
-        });
     }
 
-
-    public void uiSetUp() {
-        info = findViewById(R.id.tempInfoTV);
-        result = findViewById(R.id.tempResultTV);
-        infoselc = findViewById(R.id.infoSelc);
-        resultselc = findViewById(R.id.resultSelc);
-        calc = findViewById(R.id.calc);
+    public void uisetup() {
+        calc = findViewById(R.id.digStorageCalcBTN);
+        infospinner = findViewById(R.id.digStorageInfoSpinner);
+        resultspinner = findViewById(R.id.digStorageResultSpinner);
+        info = findViewById(R.id.digStorageInfoTV);
+        result = findViewById(R.id.digStorageResultTV);
     }
 
     @Override
@@ -125,7 +80,7 @@ public class TempActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.temp, menu);
+        getMenuInflater().inflate(R.menu.dig_storage, menu);
         return true;
     }
 
@@ -182,9 +137,6 @@ public class TempActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_pressure) {
             Intent startintent = new Intent(getApplicationContext(), Pressure.class);
-            startActivity(startintent);
-        } else if (id == R.id.nav_energy) {
-            Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_angle) {
             Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);

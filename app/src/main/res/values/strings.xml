@@ -190,6 +190,54 @@
         <item>Minute</item>
         <item>Second</item>
     </string-array>
+    <string-array name="digStorage1">
+        <item>Byte</item>
+        <item>Kilobyte</item>
+        <item>Megabyte</item>
+        <item>Gigabyte</item>
+        <item>Terabyte</item>
+        <item>Petabyte</item>
+        <item>Kibibyte</item>
+        <item>Mebibyte</item>
+        <item>Gibibyte</item>
+        <item>Tebibyte</item>
+        <item>Pebibyte</item>
+        <item>Bit</item>
+        <item>Kilobit</item>
+        <item>Megabit</item>
+        <item>Gigabit</item>
+        <item>Terabit</item>
+        <item>Petabit</item>
+        <item>Kibibit</item>
+        <item>Mebibit</item>
+        <item>Gibibit</item>
+        <item>Tebibit</item>
+        <item>Pebibit</item>
+    </string-array>
+    <string-array name="digStorage2">
+        <item>Byte</item>
+        <item>Kilobyte</item>
+        <item>Megabyte</item>
+        <item>Gigabyte</item>
+        <item>Terabyte</item>
+        <item>Petabyte</item>
+        <item>Kibibyte</item>
+        <item>Mebibyte</item>
+        <item>Gibibyte</item>
+        <item>Tebibyte</item>
+        <item>Pebibyte</item>
+        <item>Bit</item>
+        <item>Kilobit</item>
+        <item>Megabit</item>
+        <item>Gigabit</item>
+        <item>Terabit</item>
+        <item>Petabit</item>
+        <item>Kibibit</item>
+        <item>Mebibit</item>
+        <item>Gibibit</item>
+        <item>Tebibit</item>
+        <item>Pebibit</item>
+    </string-array>
     <string name="title_activity_time">TimeActivity</string>
     <string name="title_activity_speed">SpeedActivity</string>
     <string name="title_activity_volume">VolumeActivity</string>
@@ -216,4 +264,6 @@
     <string name="Energy">Energy</string>
     <string name="title_activity_angle">AngleActivity</string>
     <string name="Angle">Angle</string>
+    <string name="title_activity_dig_storage">DigStorageActivity</string>
+    <string name="Digital_storage">Digital Storage</string>
 </resources>
