@@ -1155,9 +1155,6 @@ public class MeasureActivity extends AppCompatActivity
         } else if (id == R.id.nav_angle) {
             Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_digstorage) {
-            Intent startintent = new Intent(getApplicationContext(), DigStorageActivity.class);
-            startActivity(startintent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
