@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.AreaActivity"
+            android:label="@string/title_activity_area"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Conversions.AngleActivity"
             android:label="@string/title_activity_angle"
             android:theme="@style/AppTheme.NoActionBar" />

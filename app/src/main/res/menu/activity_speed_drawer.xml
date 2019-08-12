@@ -14,29 +14,29 @@
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="@string/Scientific" />
         </item>
+
     </group>
 
-
-    <item android:title="Conversions">
+    <item android:title="@string/Conversions">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Temperature" />
+                android:title="@string/Temperature" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Length" />
+                android:title="@string/length" />
             <item
-                android:id="@+id/time"
+                android:id="@+id/nav_time"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Time" />
+                android:title="@string/Time" />
             <item
-                android:id="@+id/speed"
+                android:id="@+id/nav_speed"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Speed" />
+                android:title="@string/speed" />
             <item
-                android:id="@+id/volume"
+                android:id="@+id/nav_volume"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/Volume" />
             <item
@@ -64,6 +64,15 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/Angle" />
 
+        </menu>
+    </item>
+
+    <item android:title="@string/Geometry">
+        <menu>
+            <item
+                android:id="@+id/nav_area"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/Area" />
         </menu>
     </item>
 

@@ -29,6 +29,7 @@ import io.github.joshtiffany.ultimatecalculator.Conversions.TempActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TimeActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.VolumeActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.WeightActivty;
+import io.github.joshtiffany.ultimatecalculator.Geometry.AreaActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class ScientificActivity extends AppCompatActivity
@@ -630,10 +631,10 @@ public class ScientificActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_standard) {
+        if (id == R.id.nav_home) {
             Intent startintent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_scientific) {
+        } else if (id == R.id.nav_gallery) {
             Intent startintent = new Intent(getApplicationContext(), ScientificActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_share) {
@@ -645,10 +646,10 @@ public class ScientificActivity extends AppCompatActivity
         } else if (id == R.id.nav_time) {
             Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.speed) {
+        } else if (id == R.id.nav_speed) {
             Intent startintent = new Intent(getApplicationContext(), SpeedActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.volume) {
+        } else if (id == R.id.nav_volume) {
             Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_force) {
@@ -668,6 +669,9 @@ public class ScientificActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_angle) {
             Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_area) {
+            Intent startintent = new Intent(getApplicationContext(), AreaActivity.class);
             startActivity(startintent);
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

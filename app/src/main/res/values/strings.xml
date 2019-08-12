@@ -266,4 +266,7 @@
     <string name="Angle">Angle</string>
     <string name="title_activity_dig_storage">DigStorageActivity</string>
     <string name="Digital_storage">Digital Storage</string>
+    <string name="title_activity_area">AreaActivity</string>
+    <string name="Area">Area</string>
+    <string name="Geometry">Geometry</string>
 </resources>

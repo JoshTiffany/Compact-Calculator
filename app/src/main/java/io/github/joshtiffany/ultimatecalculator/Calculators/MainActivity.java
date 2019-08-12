@@ -27,6 +27,7 @@ import io.github.joshtiffany.ultimatecalculator.Conversions.TempActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TimeActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.VolumeActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.WeightActivty;
+import io.github.joshtiffany.ultimatecalculator.Geometry.AreaActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class MainActivity extends AppCompatActivity
@@ -428,10 +429,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
 
-        if (id == R.id.nav_standard) {
+        if (id == R.id.nav_home) {
             Intent startintent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.nav_scientific) {
+        } else if (id == R.id.nav_gallery) {
             Intent startintent = new Intent(getApplicationContext(), ScientificActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_share) {
@@ -443,10 +444,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_time) {
             Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.speed) {
+        } else if (id == R.id.nav_speed) {
             Intent startintent = new Intent(getApplicationContext(), SpeedActivity.class);
             startActivity(startintent);
-        } else if (id == R.id.volume) {
+        } else if (id == R.id.nav_volume) {
             Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_force) {
@@ -466,6 +467,52 @@ public class MainActivity extends AppCompatActivity
             startActivity(startintent);
         } else if (id == R.id.nav_angle) {
             Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_area) {
+            Intent startintent = new Intent(getApplicationContext(), AreaActivity.class);
+            startActivity(startintent);
+        }
+        if (id == R.id.nav_home) {
+            Intent startintent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_gallery) {
+            Intent startintent = new Intent(getApplicationContext(), ScientificActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_share) {
+            Intent startintent = new Intent(getApplicationContext(), TempActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_send) {
+            Intent startintent = new Intent(getApplicationContext(), MeasureActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_time) {
+            Intent startintent = new Intent(getApplicationContext(), TimeActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_speed) {
+            Intent startintent = new Intent(getApplicationContext(), SpeedActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_volume) {
+            Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_force) {
+            Intent startintent = new Intent(getApplicationContext(), ForceActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_weight) {
+            Intent startintent = new Intent(getApplicationContext(), WeightActivty.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_power) {
+            Intent startintent = new Intent(getApplicationContext(), PowerActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_pressure) {
+            Intent startintent = new Intent(getApplicationContext(), Pressure.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_energy) {
+            Intent startintent = new Intent(getApplicationContext(), EnergyActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_angle) {
+            Intent startintent = new Intent(getApplicationContext(), AngleActivity.class);
+            startActivity(startintent);
+        } else if (id == R.id.nav_area) {
+            Intent startintent = new Intent(getApplicationContext(), AreaActivity.class);
             startActivity(startintent);
         }
 
