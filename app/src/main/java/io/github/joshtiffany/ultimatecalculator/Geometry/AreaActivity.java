@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -51,6 +53,16 @@ public class AreaActivity extends AppCompatActivity
         simpleList = findViewById(R.id.areaListView);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.listview, R.id.textView, geometry);
         simpleList.setAdapter(arrayAdapter);
+
+        simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    Intent intent = new Intent(getApplicationContext(), AreaTriangleActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override
