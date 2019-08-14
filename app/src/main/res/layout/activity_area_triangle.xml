@@ -6,4 +6,7 @@
     tools:context=".Geometry.AreaTriangleActivity">
 
 
+    <include layout="@layout/content_area_triangle" />
+
+
 </android.support.design.widget.CoordinatorLayout>
