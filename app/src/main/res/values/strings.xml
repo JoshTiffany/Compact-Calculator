@@ -271,4 +271,6 @@
     <string name="Geometry">Geometry</string>
     <string name="title_activity_area_triangle">AreaTriangleActivity</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_area_square">AreaSquareActivity</string>
+    <string name="title_activity_area_rectangle">AreaRectangleActivity</string>
 </resources>

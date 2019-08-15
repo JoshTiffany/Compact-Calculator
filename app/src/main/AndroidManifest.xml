@@ -10,9 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.AreaRectangleActivity"
+            android:label="Rectangle"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".Geometry.AreaSquareActivity"
+            android:label="Square"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".TestActivity"
             android:label="@string/title_activity_test"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Geometry.AreaTriangleActivity"
             android:label="Triangle"

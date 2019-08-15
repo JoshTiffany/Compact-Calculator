@@ -60,6 +60,12 @@ public class AreaActivity extends AppCompatActivity
                 if (position == 0) {
                     Intent intent = new Intent(getApplicationContext(), AreaTriangleActivity.class);
                     startActivity(intent);
+                } else if (position == 1) {
+                    Intent intent = new Intent(getApplicationContext(), AreaSquareActivity.class);
+                    startActivity(intent);
+                } else if (position == 2) {
+                    Intent intent = new Intent(getApplicationContext(), AreaRectangleActivity.class);
+                    startActivity(intent);
                 }
             }
         });
