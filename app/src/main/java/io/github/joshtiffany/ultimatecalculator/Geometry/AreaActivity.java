@@ -66,6 +66,9 @@ public class AreaActivity extends AppCompatActivity
                 } else if (position == 2) {
                     Intent intent = new Intent(getApplicationContext(), AreaRectangleActivity.class);
                     startActivity(intent);
+                } else if (position == 3) {
+                    Intent intent = new Intent(getApplicationContext(), AreaParallelogramActivity.class);
+                    startActivity(intent);
                 }
             }
         });
