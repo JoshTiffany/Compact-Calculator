@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.Trapezoid"
+            android:label="Trapezoid"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
             android:name=".Geometry.AreaParallelogramActivity"
             android:label="Parrallelogram"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Geometry.AreaRectangleActivity"
             android:label="Rectangle"

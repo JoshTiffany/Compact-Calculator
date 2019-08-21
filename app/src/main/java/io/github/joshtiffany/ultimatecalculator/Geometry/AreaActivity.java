@@ -69,6 +69,9 @@ public class AreaActivity extends AppCompatActivity
                 } else if (position == 3) {
                     Intent intent = new Intent(getApplicationContext(), AreaParallelogramActivity.class);
                     startActivity(intent);
+                } else if (position == 4) {
+                    Intent intent = new Intent(getApplicationContext(), Trapezoid.class);
+                    startActivity(intent);
                 }
             }
         });
