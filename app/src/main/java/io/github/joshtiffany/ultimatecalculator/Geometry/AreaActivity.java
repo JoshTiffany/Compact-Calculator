@@ -78,6 +78,9 @@ public class AreaActivity extends AppCompatActivity
                 } else if (position == 6) {
                     Intent intent = new Intent(getApplicationContext(), PentagonActivity.class);
                     startActivity(intent);
+                } else if (position == 7) {
+                    Intent intent = new Intent(getApplicationContext(), AreaHexagonActivity.class);
+                    startActivity(intent);
                 }
             }
         });

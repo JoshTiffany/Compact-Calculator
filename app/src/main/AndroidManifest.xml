@@ -11,8 +11,9 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Geometry.AreaHexagonActivity"
-            android:label="@string/title_activity_area_hexagon"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="Hexagon"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".Geometry.PentagonActivity"
             android:label="Pentagon"
