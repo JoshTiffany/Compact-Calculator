@@ -279,4 +279,5 @@
     <string name="title_activity_pentagon">PentagonActivity</string>
     <string name="title_activity_area_hexagon">AreaHexagonActivity</string>
     <string name="title_activity_area_circle">AreaCircleActivity</string>
+    <string name="title_activity_area_circle_arc_activty">AreaCircleArcActivty</string>
 </resources>
