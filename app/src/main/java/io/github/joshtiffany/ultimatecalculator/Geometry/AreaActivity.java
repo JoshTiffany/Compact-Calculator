@@ -81,6 +81,9 @@ public class AreaActivity extends AppCompatActivity
                 } else if (position == 7) {
                     Intent intent = new Intent(getApplicationContext(), AreaHexagonActivity.class);
                     startActivity(intent);
+                } else if (position == 8) {
+                    Intent intent = new Intent(getApplicationContext(), AreaCircleActivity.class);
+                    startActivity(intent);
                 }
             }
         });

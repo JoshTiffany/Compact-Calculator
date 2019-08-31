@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.AreaCircleActivity"
+            android:label="Circle"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
             android:name=".Geometry.AreaHexagonActivity"
             android:label="Hexagon"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Geometry.PentagonActivity"
             android:label="Pentagon"
