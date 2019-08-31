@@ -72,6 +72,9 @@ public class AreaActivity extends AppCompatActivity
                 } else if (position == 4) {
                     Intent intent = new Intent(getApplicationContext(), Trapezoid.class);
                     startActivity(intent);
+                } else if (position == 5) {
+                    Intent intent = new Intent(getApplicationContext(), RhombusActivity.class);
+                    startActivity(intent);
                 }
             }
         });

@@ -275,4 +275,5 @@
     <string name="title_activity_area_rectangle">AreaRectangleActivity</string>
     <string name="title_activity_area_parallelogram">AreaParallelogramActivity</string>
     <string name="title_activity_trapezoid">Trapezoid</string>
+    <string name="title_activity_rhombus">RhombusActivity</string>
 </resources>
