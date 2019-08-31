@@ -75,6 +75,9 @@ public class AreaActivity extends AppCompatActivity
                 } else if (position == 5) {
                     Intent intent = new Intent(getApplicationContext(), RhombusActivity.class);
                     startActivity(intent);
+                } else if (position == 6) {
+                    Intent intent = new Intent(getApplicationContext(), PentagonActivity.class);
+                    startActivity(intent);
                 }
             }
         });

@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.AreaHexagonActivity"
+            android:label="@string/title_activity_area_hexagon"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Geometry.PentagonActivity"
+            android:label="Pentagon"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Geometry.RhombusActivity"
             android:label="Rhombus"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Geometry.Trapezoid"
             android:label="Trapezoid"

@@ -276,4 +276,6 @@
     <string name="title_activity_area_parallelogram">AreaParallelogramActivity</string>
     <string name="title_activity_trapezoid">Trapezoid</string>
     <string name="title_activity_rhombus">RhombusActivity</string>
+    <string name="title_activity_pentagon">PentagonActivity</string>
+    <string name="title_activity_area_hexagon">AreaHexagonActivity</string>
 </resources>
