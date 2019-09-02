@@ -281,4 +281,5 @@
     <string name="title_activity_area_circle">AreaCircleActivity</string>
     <string name="title_activity_area_circle_arc_activty">AreaCircleArcActivty</string>
     <string name="title_activity_area_ellipse">AreaEllipseActivity</string>
+    <string name="title_activity_cube_volume">CubeVolumeActivity</string>
 </resources>

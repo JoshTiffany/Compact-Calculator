@@ -73,6 +73,10 @@
                 android:id="@+id/nav_area"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/Area" />
+            <item
+                android:id="@+id/nav_geovolume"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/Volume" />
         </menu>
     </item>
 

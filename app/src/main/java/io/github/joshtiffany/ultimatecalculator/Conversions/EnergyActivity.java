@@ -299,6 +299,9 @@ public class EnergyActivity extends AppCompatActivity
         } else if (id == R.id.nav_area) {
             Intent startintent = new Intent(getApplicationContext(), AreaActivity.class);
             startActivity(startintent);
+        } else if (id == R.id.nav_geovolume) {
+            Intent startintent = new Intent(getApplicationContext(), io.github.joshtiffany.ultimatecalculator.Geometry.VolumeActivity.class);
+            startActivity(startintent);
         }
 
 

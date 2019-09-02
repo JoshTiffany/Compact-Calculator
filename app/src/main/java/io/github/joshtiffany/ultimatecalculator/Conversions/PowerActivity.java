@@ -295,6 +295,9 @@ public class PowerActivity extends AppCompatActivity
         } else if (id == R.id.nav_area) {
             Intent startintent = new Intent(getApplicationContext(), AreaActivity.class);
             startActivity(startintent);
+        } else if (id == R.id.nav_geovolume) {
+            Intent startintent = new Intent(getApplicationContext(), io.github.joshtiffany.ultimatecalculator.Geometry.VolumeActivity.class);
+            startActivity(startintent);
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

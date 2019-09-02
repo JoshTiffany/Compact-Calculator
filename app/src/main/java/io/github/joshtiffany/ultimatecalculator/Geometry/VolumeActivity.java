@@ -26,21 +26,19 @@ import io.github.joshtiffany.ultimatecalculator.Conversions.Pressure;
 import io.github.joshtiffany.ultimatecalculator.Conversions.SpeedActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TempActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.TimeActivity;
-import io.github.joshtiffany.ultimatecalculator.Conversions.VolumeActivity;
 import io.github.joshtiffany.ultimatecalculator.Conversions.WeightActivty;
 import io.github.joshtiffany.ultimatecalculator.R;
 
-public class AreaActivity extends AppCompatActivity
+public class VolumeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ListView simpleList;
-    String[] geometry = {"Triangle", "Square", "Rectangle", "Parallelogram", "Trapezoid", "Rhombus", "Pentagon", "Hexagon", "Circle", "circle arc", "Ellipse"};
-
+    String[] geometry = {"Cube", "Rectangular Prism", "Square Pyramid", "Square Pyramid Frustum", "Cylinder", "Cone", "Conical Frustum", "Sphere", "Spherical Cap", "Spherical Segment", "Ellipsoid"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_area);
+        setContentView(R.layout.activity_volume2);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -50,7 +48,7 @@ public class AreaActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-        simpleList = findViewById(R.id.areaListView);
+        simpleList = findViewById(R.id.volumeListView);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.listview, R.id.textView, geometry);
         simpleList.setAdapter(arrayAdapter);
 
@@ -58,42 +56,13 @@ public class AreaActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Intent intent = new Intent(getApplicationContext(), AreaTriangleActivity.class);
-                    startActivity(intent);
-                } else if (position == 1) {
-                    Intent intent = new Intent(getApplicationContext(), AreaSquareActivity.class);
-                    startActivity(intent);
-                } else if (position == 2) {
-                    Intent intent = new Intent(getApplicationContext(), AreaRectangleActivity.class);
-                    startActivity(intent);
-                } else if (position == 3) {
-                    Intent intent = new Intent(getApplicationContext(), AreaParallelogramActivity.class);
-                    startActivity(intent);
-                } else if (position == 4) {
-                    Intent intent = new Intent(getApplicationContext(), Trapezoid.class);
-                    startActivity(intent);
-                } else if (position == 5) {
-                    Intent intent = new Intent(getApplicationContext(), RhombusActivity.class);
-                    startActivity(intent);
-                } else if (position == 6) {
-                    Intent intent = new Intent(getApplicationContext(), PentagonActivity.class);
-                    startActivity(intent);
-                } else if (position == 7) {
-                    Intent intent = new Intent(getApplicationContext(), AreaHexagonActivity.class);
-                    startActivity(intent);
-                } else if (position == 8) {
-                    Intent intent = new Intent(getApplicationContext(), AreaCircleActivity.class);
-                    startActivity(intent);
-                } else if (position == 9) {
-                    Intent intent = new Intent(getApplicationContext(), AreaCircleArcActivty.class);
-                    startActivity(intent);
-                } else if (position == 10) {
-                    Intent intent = new Intent(getApplicationContext(), AreaEllipseActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), CubeVolumeActivity.class);
                     startActivity(intent);
                 }
             }
         });
     }
+
 
     @Override
     public void onBackPressed() {
@@ -108,7 +77,7 @@ public class AreaActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.area, menu);
+        getMenuInflater().inflate(R.menu.volume, menu);
         return true;
     }
 
@@ -152,7 +121,7 @@ public class AreaActivity extends AppCompatActivity
             Intent startintent = new Intent(getApplicationContext(), SpeedActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_volume) {
-            Intent startintent = new Intent(getApplicationContext(), VolumeActivity.class);
+            Intent startintent = new Intent(getApplicationContext(), io.github.joshtiffany.ultimatecalculator.Conversions.VolumeActivity.class);
             startActivity(startintent);
         } else if (id == R.id.nav_force) {
             Intent startintent = new Intent(getApplicationContext(), ForceActivity.class);
@@ -179,6 +148,7 @@ public class AreaActivity extends AppCompatActivity
             Intent startintent = new Intent(getApplicationContext(), io.github.joshtiffany.ultimatecalculator.Geometry.VolumeActivity.class);
             startActivity(startintent);
         }
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
