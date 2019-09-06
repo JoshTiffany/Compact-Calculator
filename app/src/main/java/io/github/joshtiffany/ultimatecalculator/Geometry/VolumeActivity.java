@@ -64,7 +64,7 @@ public class VolumeActivity extends AppCompatActivity
                     startActivity(intent);
                 }
                 if (position == 2) {
-                    Intent intent = new Intent(getApplicationContext(), RectangPrismVolumeActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), SquarePyrActivity.class);
                     startActivity(intent);
                 }
                 if (position == 3) {
