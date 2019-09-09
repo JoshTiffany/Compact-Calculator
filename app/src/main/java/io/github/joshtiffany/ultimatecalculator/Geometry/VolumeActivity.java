@@ -75,6 +75,10 @@ public class VolumeActivity extends AppCompatActivity
                     Intent intent = new Intent(getApplicationContext(), CylinderVolumeActivity.class);
                     startActivity(intent);
                 }
+                if (position == 5) {
+                    Intent intent = new Intent(getApplicationContext(), ConeVolumeActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }
