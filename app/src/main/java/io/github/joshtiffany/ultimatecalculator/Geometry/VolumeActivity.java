@@ -79,6 +79,10 @@ public class VolumeActivity extends AppCompatActivity
                     Intent intent = new Intent(getApplicationContext(), ConeVolumeActivity.class);
                     startActivity(intent);
                 }
+                if (position == 6) {
+                    Intent intent = new Intent(getApplicationContext(), ConicalFrustumActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }
