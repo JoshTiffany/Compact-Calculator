@@ -71,6 +71,10 @@ public class VolumeActivity extends AppCompatActivity
                     Intent intent = new Intent(getApplicationContext(), SquarePyrFrustumActivity.class);
                     startActivity(intent);
                 }
+                if (position == 4) {
+                    Intent intent = new Intent(getApplicationContext(), CylinderVolumeActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }

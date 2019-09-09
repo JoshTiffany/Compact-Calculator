@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.CylinderVolumeActivity"
+            android:label="Cylinder"
+            android:parentActivityName=".Geometry.VolumeActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
             android:name=".Geometry.SquarePyrActivity"
             android:label="Square Pryamid"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Geometry.SquarePyrFrustumActivity"
             android:label="Square Pyramid Frustum"
