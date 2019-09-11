@@ -95,6 +95,10 @@ public class VolumeActivity extends AppCompatActivity
                     Intent intent = new Intent(getApplicationContext(), SphericalSegActivity.class);
                     startActivity(intent);
                 }
+                if (position == 10) {
+                    Intent intent = new Intent(getApplicationContext(), EllipsoidVolumeActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }
