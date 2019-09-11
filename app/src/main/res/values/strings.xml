@@ -290,4 +290,5 @@
     <string name="title_activity_conical_frustum">ConicalFrustumActivity</string>
     <string name="title_activity_sphere_volume">SphereVolumeActivity</string>
     <string name="title_activity_spherical_cap_volume">SphericalCapVolumeActivity</string>
+    <string name="title_activity_spherical_seg">SphericalSegActivity</string>
 </resources>
