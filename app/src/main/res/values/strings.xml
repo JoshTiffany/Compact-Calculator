@@ -288,4 +288,5 @@
     <string name="title_activity_cylinder_volume">CylinderVolumeActivity</string>
     <string name="title_activity_cone_volume">ConeVolumeActivity</string>
     <string name="title_activity_conical_frustum">ConicalFrustumActivity</string>
+    <string name="title_activity_sphere_volume">SphereVolumeActivity</string>
 </resources>

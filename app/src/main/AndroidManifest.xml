@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.SphereVolumeActivity"
+            android:label="Sphere"
+            android:parentActivityName=".Geometry.VolumeActivity"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Geometry.ConicalFrustumActivity"
             android:label="Conical Frustum"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Geometry.ConeVolumeActivity"
             android:label="Cone"
