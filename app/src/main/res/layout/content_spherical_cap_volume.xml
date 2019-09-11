@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Geometry.ConeVolumeActivity"
-    tools:showIn="@layout/activity_cone_volume">
+    tools:context=".Geometry.SphericalCapVolumeActivity"
+    tools:showIn="@layout/activity_spherical_cap_volume">
 
     <android.support.v7.widget.CardView
         android:id="@+id/inputCV"
@@ -39,7 +39,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/coneRadiusInputTV"
+                android:id="@+id/spcRadiusInputTV"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -53,7 +53,7 @@
                 android:inputType="number" />
 
             <EditText
-                android:id="@+id/coneHeightInputTV"
+                android:id="@+id/spcHeightInputTV"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -100,7 +100,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/coneAreaOutputTV"
+                android:id="@+id/spcAreaOutputTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -116,7 +116,7 @@
     </android.support.v7.widget.CardView>
 
     <Button
-        android:id="@+id/coneCalcBTN"
+        android:id="@+id/spcCalcBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"

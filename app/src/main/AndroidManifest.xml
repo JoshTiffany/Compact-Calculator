@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.SphericalCapVolumeActivity"
+            android:label="Spherical Cap"
+            android:parentActivityName=".Geometry.VolumeActivity"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Geometry.SphereVolumeActivity"
             android:label="Sphere"
             android:parentActivityName=".Geometry.VolumeActivity"
