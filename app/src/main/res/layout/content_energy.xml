@@ -8,70 +8,77 @@
     tools:context=".Conversions.EnergyActivity"
     tools:showIn="@layout/app_bar_energy">
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="25dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="179dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="="
-        android:textSize="50sp"
-        app:layout_constraintEnd_toStartOf="@+id/energyResultTV"
-        app:layout_constraintStart_toEndOf="@+id/energyInfoTV"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/energyInfoTV"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="179dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/energyInfoSpinner"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/energyInfoTV" />
-
-    <Spinner
-        android:id="@+id/energyResultSpinner"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+    <android.support.v7.widget.CardView
+        android:id="@+id/inputCV"
+        android:layout_width="325dp"
+        android:layout_height="225dp"
+        android:layout_marginBottom="300dp"
+        android:foregroundGravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/energyResultTV" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/energyResultTV"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="179dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="70dp"
+                android:text="="
+                android:textSize="50sp" />
+
+            <EditText
+                android:id="@+id/energyInfoTV"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="75dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <Spinner
+                android:id="@+id/energyInfoSpinner"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="125dp" />
+
+            <Spinner
+                android:id="@+id/energyResultSpinner"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="187dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="125dp" />
+
+            <TextView
+                android:id="@+id/energyResultTV"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="75dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
     <Button
         android:id="@+id/energyCalcBTN"
         android:layout_width="110dp"
         android:layout_height="50dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="44dp"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/inputCV" />
 
 </android.support.constraint.ConstraintLayout>
