@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#9400D3</color>
     <color name="colorPrimaryDark">#9400D3</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#9400D3</color>
     <color name="side_nav_text_color">#ffffff</color>
     <color name="app_bar_bar_bColor">#9400D3</color>
     <color name="black">#000000</color>

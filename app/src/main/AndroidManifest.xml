@@ -13,176 +13,252 @@
             android:name=".Geometry.EllipsoidVolumeActivity"
             android:label="Ellipsoid"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Geometry.SphericalSegActivity"
             android:label="Spherical Segment"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.SphericalCapVolumeActivity"
             android:label="Spherical Cap"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.SphereVolumeActivity"
             android:label="Sphere"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.ConicalFrustumActivity"
             android:label="Conical Frustum"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.ConeVolumeActivity"
             android:label="Cone"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.CylinderVolumeActivity"
             android:label="Cylinder"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.SquarePyrActivity"
             android:label="Square Pryamid"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.SquarePyrFrustumActivity"
             android:label="Square Pyramid Frustum"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.RectangPrismVolumeActivity"
             android:label="Rectangular Prism"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.CubeVolumeActivity"
             android:label="Cube"
             android:parentActivityName=".Geometry.VolumeActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.VolumeActivity"
             android:label="@string/title_activity_volume"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.AreaEllipseActivity"
             android:label="Ellipse"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.AreaCircleArcActivty"
             android:label="Circle Arc"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.AreaCircleActivity"
             android:label="Circle"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.AreaHexagonActivity"
             android:label="Hexagon"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.PentagonActivity"
             android:label="Pentagon"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.RhombusActivity"
             android:label="Rhombus"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.Trapezoid"
             android:label="Trapezoid"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.AreaParallelogramActivity"
             android:label="Parrallelogram"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.AreaRectangleActivity"
             android:label="Rectangle"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.AreaSquareActivity"
             android:label="Square"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".TestActivity"
             android:label="@string/title_activity_test"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.AreaTriangleActivity"
             android:label="Triangle"
             android:parentActivityName=".Geometry.AreaActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geometry.AreaActivity"
             android:label="@string/title_activity_area"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.AngleActivity"
             android:label="@string/title_activity_angle"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.EnergyActivity"
             android:label="@string/title_activity_energy"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.Pressure"
             android:label="@string/title_activity_pressure"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.PowerActivity"
             android:label="@string/title_activity_power"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.WeightActivty"
             android:label="@string/title_activity_weight_activty"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.ForceActivity"
             android:label="@string/title_activity_force"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.VolumeActivity"
             android:label="@string/title_activity_volume"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.SpeedActivity"
             android:label="@string/title_activity_speed"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.TimeActivity"
             android:label="@string/title_activity_time"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.MeasureActivity"
             android:label="@string/title_activity_measure"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Conversions.TempActivity"
             android:label="@string/title_activity_temp"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Calculators.ScientificActivity"
             android:label="@string/title_activity_scientific"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Calculators.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
