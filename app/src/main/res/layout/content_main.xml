@@ -13,10 +13,6 @@
         android:id="@+id/editText"
         android:layout_width="352dp"
         android:layout_height="84dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
         android:background="#00A83E3E"
         android:clickable="true"
         android:ems="10"
@@ -27,307 +23,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sciResultTV" />
 
-    <Button
-        android:id="@+id/percentBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="%"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciSquareRootBTN"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <Button
-        android:id="@+id/sciSquareRootBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="√"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/squaredBTN"
-        app:layout_constraintStart_toEndOf="@+id/percentBTN"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <Button
-        android:id="@+id/squaredBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="X2"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/repcipicalBTN"
-        app:layout_constraintStart_toEndOf="@+id/sciSquareRootBTN"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <Button
-        android:id="@+id/repcipicalBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="1/X"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/squaredBTN"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <Button
-        android:id="@+id/sciClearEntryBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="CE"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciClearBTN"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/percentBTN" />
-
-    <Button
-        android:id="@+id/sciClearBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="C"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/delBTN"
-        app:layout_constraintStart_toEndOf="@+id/sciClearEntryBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sciSquareRootBTN" />
-
-    <Button
-        android:id="@+id/delBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="Del"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciDivisionBTN"
-        app:layout_constraintStart_toEndOf="@+id/sciClearBTN"
-        app:layout_constraintTop_toBottomOf="@+id/squaredBTN" />
-
-    <Button
-        android:id="@+id/sciDivisionBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#9400D3"
-        android:text="÷"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/delBTN"
-        app:layout_constraintTop_toBottomOf="@+id/repcipicalBTN" />
-
-    <Button
-        android:id="@+id/sciSevenBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="7"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciEightBTN"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sciClearEntryBTN" />
-
-    <Button
-        android:id="@+id/sciMultiplicationBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#9400D3"
-        android:text="×"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/sciNineBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sciDivisionBTN" />
-
-    <Button
-        android:id="@+id/sciFourBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="4"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciFiveBTN"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sciSevenBTN" />
-
-    <Button
-        android:id="@+id/sciFiveBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="5"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciSixBTN"
-        app:layout_constraintStart_toEndOf="@+id/sciFourBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sciEightBTN" />
-
-    <Button
-        android:id="@+id/sciSubtractionBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#9400D3"
-        android:text="−"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/sciSixBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sciMultiplicationBTN" />
-
-    <Button
-        android:id="@+id/sciOneBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="1"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciTwoBTN"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sciFourBTN" />
-
-    <Button
-        android:id="@+id/sciTwoBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="2"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciThreeBTN"
-        app:layout_constraintStart_toEndOf="@+id/sciOneBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sciFiveBTN" />
-
-    <Button
-        android:id="@+id/sciThreeBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="3"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciAdditionBTN"
-        app:layout_constraintStart_toEndOf="@+id/sciTwoBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sciSixBTN" />
-
-    <Button
-        android:id="@+id/sciAdditionBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#9400D3"
-        android:text="+"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/sciThreeBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sciSubtractionBTN" />
-
-    <Button
-        android:id="@+id/subAndAddBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="±"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciZeroBTN"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sciOneBTN" />
-
-    <Button
-        android:id="@+id/sciZeroBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/decimalBTN"
-        app:layout_constraintStart_toEndOf="@+id/subAndAddBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sciTwoBTN" />
-
-    <Button
-        android:id="@+id/decimalBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#111111"
-        android:text="."
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/sciEqualBTN"
-        app:layout_constraintStart_toEndOf="@+id/sciZeroBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sciThreeBTN" />
-
-    <Button
-        android:id="@+id/sciEqualBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:height="57dp"
-        android:background="#9400D3"
-        android:text="="
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/decimalBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sciAdditionBTN" />
-
     <TextView
         android:id="@+id/sciResultTV"
         android:layout_width="323dp"
         android:layout_height="51dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
         android:layout_marginTop="85dp"
         android:layout_marginEnd="9dp"
         android:layout_marginRight="9dp"
@@ -336,37 +35,373 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/percentBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="%"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciClearEntryBTN"
+        app:layout_constraintEnd_toStartOf="@+id/sciSquareRootBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/sciSquareRootBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="√"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/sciClearBTN"
+        app:layout_constraintEnd_toStartOf="@+id/squaredBTN"
+        app:layout_constraintStart_toEndOf="@+id/percentBTN"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/squaredBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="X2"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/delBTN"
+        app:layout_constraintEnd_toStartOf="@+id/repcipicalBTN"
+        app:layout_constraintStart_toEndOf="@+id/sciSquareRootBTN"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/repcipicalBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="1/X"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciDivisionBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/squaredBTN"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/sciClearEntryBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="CE"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciSevenBTN"
+        app:layout_constraintEnd_toStartOf="@+id/sciClearBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentBTN" />
+
+    <Button
+        android:id="@+id/sciClearBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="C"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciEightBTN"
+        app:layout_constraintEnd_toStartOf="@+id/delBTN"
+        app:layout_constraintStart_toEndOf="@+id/sciClearEntryBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sciSquareRootBTN" />
+
+    <Button
+        android:id="@+id/delBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="Del"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciNineBTN"
+        app:layout_constraintEnd_toStartOf="@+id/sciDivisionBTN"
+        app:layout_constraintStart_toEndOf="@+id/sciClearBTN"
+        app:layout_constraintTop_toBottomOf="@+id/squaredBTN" />
+
+    <Button
+        android:id="@+id/sciDivisionBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#9400D3"
+        android:text="÷"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciMultiplicationBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/delBTN"
+        app:layout_constraintTop_toBottomOf="@+id/repcipicalBTN" />
+
+    <Button
+        android:id="@+id/sciSevenBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciFourBTN"
+        app:layout_constraintEnd_toStartOf="@+id/sciEightBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sciClearEntryBTN" />
+
+    <Button
+        android:id="@+id/sciMultiplicationBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#9400D3"
+        android:text="×"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciSubtractionBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sciNineBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sciDivisionBTN" />
+
+    <Button
+        android:id="@+id/sciFourBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="4"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciOneBTN"
+        app:layout_constraintEnd_toStartOf="@+id/sciFiveBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sciSevenBTN" />
+
+    <Button
+        android:id="@+id/sciFiveBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="5"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciTwoBTN"
+        app:layout_constraintEnd_toStartOf="@+id/sciSixBTN"
+        app:layout_constraintStart_toEndOf="@+id/sciFourBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sciEightBTN" />
+
+    <Button
+        android:id="@+id/sciSubtractionBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#9400D3"
+        android:text="−"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciAdditionBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sciSixBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sciMultiplicationBTN" />
+
+    <Button
+        android:id="@+id/sciOneBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/subAndAddBTN"
+        app:layout_constraintEnd_toStartOf="@+id/sciTwoBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sciFourBTN" />
+
+    <Button
+        android:id="@+id/sciTwoBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="2"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciZeroBTN"
+        app:layout_constraintEnd_toStartOf="@+id/sciThreeBTN"
+        app:layout_constraintStart_toEndOf="@+id/sciOneBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sciFiveBTN" />
+
+    <Button
+        android:id="@+id/sciThreeBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/decimalBTN"
+        app:layout_constraintEnd_toStartOf="@+id/sciAdditionBTN"
+        app:layout_constraintStart_toEndOf="@+id/sciTwoBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sciSixBTN" />
+
+    <Button
+        android:id="@+id/sciAdditionBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#9400D3"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciEqualBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sciThreeBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sciSubtractionBTN" />
+
+    <Button
+        android:id="@+id/subAndAddBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="47dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="±"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sciZeroBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sciOneBTN" />
+
+    <Button
+        android:id="@+id/sciZeroBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="47dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/decimalBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/subAndAddBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sciTwoBTN" />
+
+    <Button
+        android:id="@+id/decimalBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="47dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#111111"
+        android:text="."
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sciEqualBTN"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/sciZeroBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sciThreeBTN" />
+
+    <Button
+        android:id="@+id/sciEqualBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="47dp"
+        android:width="90dp"
+        android:height="57dp"
+        android:background="#9400D3"
+        android:text="="
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/decimalBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sciAdditionBTN" />
+
+
+    <Button
         android:id="@+id/sciNineBTN"
-        android:layout_width="90dp"
-        android:layout_height="57dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
         android:background="#111111"
         android:text="9"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciSixBTN"
         app:layout_constraintEnd_toStartOf="@+id/sciMultiplicationBTN"
         app:layout_constraintStart_toEndOf="@+id/sciEightBTN"
         app:layout_constraintTop_toBottomOf="@+id/delBTN" />
 
     <Button
         android:id="@+id/sciEightBTN"
-        android:layout_width="90dp"
-        android:layout_height="57dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:width="90dp"
+        android:height="57dp"
         android:background="#111111"
         android:text="8"
         android:textColor="#FFF"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciFiveBTN"
         app:layout_constraintEnd_toStartOf="@+id/sciNineBTN"
         app:layout_constraintStart_toEndOf="@+id/sciSevenBTN"
         app:layout_constraintTop_toBottomOf="@+id/sciClearBTN" />
 
     <Button
         android:id="@+id/sciSixBTN"
-        android:layout_width="90dp"
-        android:layout_height="57dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:width="90dp"
+        android:height="57dp"
         android:background="#111111"
         android:text="6"
         android:textColor="#fff"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/sciThreeBTN"
         app:layout_constraintEnd_toStartOf="@+id/sciSubtractionBTN"
         app:layout_constraintStart_toEndOf="@+id/sciFiveBTN"
         app:layout_constraintTop_toBottomOf="@+id/sciNineBTN" />
