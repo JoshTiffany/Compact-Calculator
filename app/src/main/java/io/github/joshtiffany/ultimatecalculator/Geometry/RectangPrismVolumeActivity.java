@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class RectangPrismVolumeActivity extends AppCompatActivity {
@@ -16,6 +19,7 @@ public class RectangPrismVolumeActivity extends AppCompatActivity {
     private EditText lengthTV, widthTV, heightTV;
     private TextView result;
     private Double length, height, width, volume;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +49,10 @@ public class RectangPrismVolumeActivity extends AppCompatActivity {
         heightTV = findViewById(R.id.repriHeightInputTV);
         widthTV = findViewById(R.id.repriWidthInputTV);
         result = findViewById(R.id.repriVolumeOutputTV);
+
+        adView = findViewById(R.id.adViewvrep);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
 }

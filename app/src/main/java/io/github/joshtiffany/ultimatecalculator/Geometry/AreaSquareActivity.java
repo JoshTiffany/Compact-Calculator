@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class AreaSquareActivity extends AppCompatActivity {
@@ -16,6 +19,7 @@ public class AreaSquareActivity extends AppCompatActivity {
     private EditText sideTV;
     private TextView result;
     private Double side, area;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,10 @@ public class AreaSquareActivity extends AppCompatActivity {
         calc = findViewById(R.id.squCalcBTN);
         sideTV = findViewById(R.id.squSideInputTV);
         result = findViewById(R.id.squAreaOutputTV);
+
+        adView = findViewById(R.id.adViewas);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
 }

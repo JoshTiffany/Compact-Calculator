@@ -15,6 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.navigation.NavigationView;
 
 import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
@@ -32,6 +34,7 @@ public class TempActivity extends AppCompatActivity
     private Button calc;
     int temp;
     int val1;
+    private AdView adView;
 
 
     @Override
@@ -113,6 +116,10 @@ public class TempActivity extends AppCompatActivity
         infoselc = findViewById(R.id.infoSelc);
         resultselc = findViewById(R.id.resultSelc);
         calc = findViewById(R.id.calc);
+
+        adView = findViewById(R.id.adViewtemp);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override

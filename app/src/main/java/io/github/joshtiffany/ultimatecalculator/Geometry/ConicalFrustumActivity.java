@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class ConicalFrustumActivity extends AppCompatActivity {
@@ -16,6 +19,7 @@ public class ConicalFrustumActivity extends AppCompatActivity {
     private EditText baseTV, topTV, heightTV;
     private TextView result;
     private Double base, height, top, volume;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +50,9 @@ public class ConicalFrustumActivity extends AppCompatActivity {
         heightTV = findViewById(R.id.confruHeightInputTV);
         topTV = findViewById(R.id.confruTopInputTV);
         result = findViewById(R.id.confruVolumeOutputTV);
+
+        adView = findViewById(R.id.adViewcf);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 }

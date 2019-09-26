@@ -17,6 +17,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.navigation.NavigationView;
 
 import javax.measure.Measure;
@@ -42,6 +44,7 @@ public class EnergyActivity extends AppCompatActivity
     private double val1;
     private UnitConverter ut;
     private boolean val2;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -218,6 +221,10 @@ public class EnergyActivity extends AppCompatActivity
         resultspinner = findViewById(R.id.energyResultSpinner);
         info = findViewById(R.id.energyInfoTV);
         result = findViewById(R.id.energyResultTV);
+
+        adView = findViewById(R.id.adViewener);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
 

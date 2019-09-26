@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class CylinderVolumeActivity extends AppCompatActivity {
@@ -16,6 +19,7 @@ public class CylinderVolumeActivity extends AppCompatActivity {
     private EditText radiusTV, heightTV;
     private TextView result;
     private Double radius, height, volume;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,5 +48,9 @@ public class CylinderVolumeActivity extends AppCompatActivity {
         radiusTV = findViewById(R.id.cylRadiusInputTV);
         heightTV = findViewById(R.id.cylHeightInputTV);
         result = findViewById(R.id.cylAreaOutputTV);
+
+        adView = findViewById(R.id.adViewcyv);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 }

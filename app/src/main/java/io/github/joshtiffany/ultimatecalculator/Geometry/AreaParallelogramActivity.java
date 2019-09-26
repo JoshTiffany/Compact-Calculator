@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class AreaParallelogramActivity extends AppCompatActivity {
@@ -16,6 +19,7 @@ public class AreaParallelogramActivity extends AppCompatActivity {
     private EditText sideTV, heightTV;
     private TextView result;
     private Double side, height, area;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +49,10 @@ public class AreaParallelogramActivity extends AppCompatActivity {
         sideTV = findViewById(R.id.paraSideInputTV);
         heightTV = findViewById(R.id.paraHeightInputTV);
         result = findViewById(R.id.paraAreaOutputTV);
+
+        adView = findViewById(R.id.adViewapar);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
 }

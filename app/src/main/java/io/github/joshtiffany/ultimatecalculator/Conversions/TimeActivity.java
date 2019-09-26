@@ -17,6 +17,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.navigation.NavigationView;
 
 import javax.measure.Measure;
@@ -42,6 +44,7 @@ public class TimeActivity extends AppCompatActivity
     private EditText info;
     private Double val1;
     private UnitConverter ut;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -212,6 +215,10 @@ public class TimeActivity extends AppCompatActivity
         infospinner = findViewById(R.id.timeInfoSpinner5);
         info = findViewById(R.id.timeInfoTV5);
         result = findViewById(R.id.timeResultTV3);
+
+        adView = findViewById(R.id.adViewtime);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override

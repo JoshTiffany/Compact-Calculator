@@ -17,6 +17,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.navigation.NavigationView;
 
 import javax.measure.Measure;
@@ -42,6 +44,7 @@ public class VolumeActivity extends AppCompatActivity
     private TextView result;
     private double val1;
     private UnitConverter ut;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -277,6 +280,10 @@ public class VolumeActivity extends AppCompatActivity
         resultspinner = findViewById(R.id.volumeResultSpinner);
         info = findViewById(R.id.volumeInfoTV);
         result = findViewById(R.id.volumeResultTV);
+
+        adView = findViewById(R.id.adViewvol);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override

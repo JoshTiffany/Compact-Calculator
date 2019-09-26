@@ -17,6 +17,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.navigation.NavigationView;
 
 import javax.measure.Measure;
@@ -41,6 +43,7 @@ public class ForceActivity extends AppCompatActivity
     private TextView result;
     private Double val1;
     private UnitConverter ut;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -168,6 +171,10 @@ public class ForceActivity extends AppCompatActivity
         resultspinner = findViewById(R.id.forceResultSpinner);
         result = findViewById(R.id.forceResultTV);
         info = findViewById(R.id.forceInfoTV);
+
+        adView = findViewById(R.id.adViewfor);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override

@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class EllipsoidVolumeActivity extends AppCompatActivity {
@@ -16,6 +19,7 @@ public class EllipsoidVolumeActivity extends AppCompatActivity {
     private EditText radiATV, radiBTV, radiCTV;
     private TextView result;
     private Double radiA, radiB, radiC, volume;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +50,9 @@ public class EllipsoidVolumeActivity extends AppCompatActivity {
         radiBTV = findViewById(R.id.elvRadiBInputTV);
         radiCTV = findViewById(R.id.elvRadiCInputTV);
         result = findViewById(R.id.elvVolumeOutputTV);
+
+        adView = findViewById(R.id.adViewvell);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 }

@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class SquarePyrFrustumActivity extends AppCompatActivity {
@@ -16,6 +19,7 @@ public class SquarePyrFrustumActivity extends AppCompatActivity {
     private EditText baseTV, topTV, heightTV;
     private TextView result;
     private Double base, height, top, volume;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,10 @@ public class SquarePyrFrustumActivity extends AppCompatActivity {
         heightTV = findViewById(R.id.squpyfruHeightInputTV);
         topTV = findViewById(R.id.squpyrfruTopInputTV);
         result = findViewById(R.id.squpyfruVolumeOutputTV);
+
+        adView = findViewById(R.id.adViewsqqupyf);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
 }

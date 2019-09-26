@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class SphericalCapVolumeActivity extends AppCompatActivity {
@@ -16,6 +19,7 @@ public class SphericalCapVolumeActivity extends AppCompatActivity {
     private EditText radiusTV, heightTV;
     private TextView result;
     private Double radius, height, volume;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,10 @@ public class SphericalCapVolumeActivity extends AppCompatActivity {
         radiusTV = findViewById(R.id.spcRadiusInputTV);
         heightTV = findViewById(R.id.spcHeightInputTV);
         result = findViewById(R.id.spcAreaOutputTV);
+
+        adView = findViewById(R.id.adViewvspc);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
 }

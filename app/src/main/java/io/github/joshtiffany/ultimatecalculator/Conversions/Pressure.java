@@ -17,6 +17,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.navigation.NavigationView;
 
 import javax.measure.Measure;
@@ -43,6 +45,7 @@ public class Pressure extends AppCompatActivity
     private TextView result;
     private double val1;
     private UnitConverter ut;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -354,6 +357,10 @@ public class Pressure extends AppCompatActivity
         resultspinner = findViewById(R.id.pressureResultSpinner);
         result = findViewById(R.id.pressureResultTV);
         info = findViewById(R.id.pressureInfoTV);
+
+        adView = findViewById(R.id.adViewpres);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override

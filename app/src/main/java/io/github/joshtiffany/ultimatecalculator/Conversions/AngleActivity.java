@@ -17,6 +17,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.navigation.NavigationView;
 
 import javax.measure.Measure;
@@ -42,6 +44,7 @@ public class AngleActivity extends AppCompatActivity
     private double val1;
     private UnitConverter ut;
     private boolean val2;
+    private AdView adView;
 
 
     @Override
@@ -171,6 +174,10 @@ public class AngleActivity extends AppCompatActivity
         resultspinner = findViewById(R.id.angleResultSpinner);
         info = findViewById(R.id.angleInfoTV);
         result = findViewById(R.id.angleResultTV);
+
+        adView = findViewById(R.id.adViewang);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
 

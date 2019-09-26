@@ -17,6 +17,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.navigation.NavigationView;
 
 import javax.measure.Measure;
@@ -41,10 +43,9 @@ public class SpeedActivity extends AppCompatActivity
     private TextView result;
     private Double val1;
     private UnitConverter ut;
+    private AdView adView;
 
-    ///
-    //// Reminder to add linearLayout ////
-    ///
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -172,6 +173,10 @@ public class SpeedActivity extends AppCompatActivity
         resultspinner = findViewById(R.id.speedResultSpinner);
         result = findViewById(R.id.speedResultTV);
         info = findViewById(R.id.speedInfoTV);
+
+        adView = findViewById(R.id.adViewspe);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override
