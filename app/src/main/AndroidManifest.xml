@@ -21,7 +21,7 @@
             android:label="Ellipsoid"
             android:parentActivityName=".Geometry.VolumeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Geometry.SphericalSegActivity"
             android:configChanges="orientation"
@@ -267,6 +267,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

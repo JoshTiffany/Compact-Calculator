@@ -44,7 +44,6 @@ public class VolumeActivity extends AppCompatActivity
     private TextView result;
     private double val1;
     private UnitConverter ut;
-    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -281,7 +280,7 @@ public class VolumeActivity extends AppCompatActivity
         info = findViewById(R.id.volumeInfoTV);
         result = findViewById(R.id.volumeResultTV);
 
-        adView = findViewById(R.id.adViewvol);
+        AdView adView = findViewById(R.id.adViewvol);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
     }
@@ -318,7 +317,6 @@ public class VolumeActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.

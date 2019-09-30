@@ -35,7 +35,7 @@
                 android:layout_marginStart="103dp"
                 android:layout_marginLeft="103dp"
                 android:layout_marginTop="13dp"
-                android:text="Input Values"
+                android:text="@string/input_values"
                 android:textSize="18sp" />
 
             <EditText
@@ -49,7 +49,7 @@
                 android:layout_marginLeft="77dp"
                 android:layout_marginBottom="60dp"
                 android:ems="10"
-                android:hint="Width"
+                android:hint="@string/width"
                 android:inputType="number" />
 
             <EditText
@@ -63,7 +63,7 @@
                 android:layout_marginRight="98dp"
                 android:layout_marginBottom="10dp"
                 android:ems="10"
-                android:hint="Height"
+                android:hint="@string/height"
                 android:inputType="number" />
 
             <EditText
@@ -110,7 +110,7 @@
                 android:layout_marginStart="121dp"
                 android:layout_marginLeft="121dp"
                 android:layout_marginTop="13dp"
-                android:text="Result"
+                android:text="@string/result"
                 android:textSize="18sp" />
 
             <TextView
@@ -127,7 +127,7 @@
                 android:ems="10"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:hint="Volume" />
+                android:hint="@string/Volume" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
@@ -138,7 +138,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:background="@drawable/button_background"
-        android:text="Calculate"
+        android:text="@string/calculate"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UltimateCalculator</string>
+    <string name="app_name">CompactCalculator</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -292,4 +292,10 @@
     <string name="title_activity_spherical_cap_volume">SphericalCapVolumeActivity</string>
     <string name="title_activity_spherical_seg">SphericalSegActivity</string>
     <string name="title_activity_ellipsoid_volume">EllipsoidVolumeActivity</string>
+    <string name="input_values">Input Values</string>
+    <string name="width">Width</string>
+    <string name="height">Height</string>
+
+    <string name="result">Result</string>
+    <string name="calculate">Calculate</string>
 </resources>
