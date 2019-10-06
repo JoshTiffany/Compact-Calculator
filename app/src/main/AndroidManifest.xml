@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/compactcalcic_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".SettingsMisc.SettingsActivity"
+            android:parentActivityName=".Calculators.MainActivity"
+            android:label="@string/title_activity_settings">
 
+        </activity>
         <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
