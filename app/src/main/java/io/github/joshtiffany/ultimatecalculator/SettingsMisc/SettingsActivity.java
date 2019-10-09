@@ -74,6 +74,11 @@ public class SettingsActivity extends AppCompatActivity {
             share.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Text");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject");
+                    startActivity(Intent.createChooser(sharingIntent, "Share using"));
                     return false;
                 }
             });
@@ -81,6 +86,8 @@ public class SettingsActivity extends AppCompatActivity {
             contact.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://joshtiffany.github.io/mysitec.html"));
+                    startActivity(browserIntent);
                     return false;
                 }
             });
@@ -88,13 +95,8 @@ public class SettingsActivity extends AppCompatActivity {
             credits.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    return false;
-                }
-            });
-
-            version.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                @Override
-                public boolean onPreferenceClick(Preference preference) {
+                    Intent creds = new Intent(getActivity().getApplicationContext(), CreditsActivity.class);
+                    startActivity(creds);
                     return false;
                 }
             });
