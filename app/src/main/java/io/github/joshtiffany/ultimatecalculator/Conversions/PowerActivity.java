@@ -58,6 +58,7 @@ public class PowerActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
         uisetup();
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,

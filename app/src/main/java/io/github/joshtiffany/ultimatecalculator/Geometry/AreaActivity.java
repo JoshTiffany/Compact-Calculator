@@ -53,6 +53,7 @@ public class AreaActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
         simpleList = findViewById(R.id.areaListView);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.listview, R.id.textView, geometry);
         simpleList.setAdapter(arrayAdapter);

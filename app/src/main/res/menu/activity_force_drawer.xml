@@ -5,12 +5,16 @@
 
     <group android:checkableBehavior="single">
         <item android:title="@string/Calculators">
-            <item
-                android:id="@+id/nav_home"
-                android:title="@string/Standard" />
-            <item
-                android:id="@+id/nav_gallery"
-                android:title="@string/Scientific" />
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_standard"
+                    android:title="@string/Standard" />
+                <item
+                    android:id="@+id/nav_gallery"
+                    android:icon="@drawable/ic_calculating"
+                    android:title="@string/Scientific" />
+            </menu>
         </item>
 
     </group>
@@ -19,36 +23,47 @@
         <menu>
             <item
                 android:id="@+id/nav_share"
+                android:icon="@drawable/ic_thermometer"
                 android:title="@string/Temperature" />
             <item
                 android:id="@+id/nav_send"
+                android:icon="@drawable/ic_resize_length"
                 android:title="@string/length" />
             <item
                 android:id="@+id/nav_time"
+                android:icon="@drawable/ic_hourglass"
                 android:title="@string/Time" />
             <item
                 android:id="@+id/nav_speed"
+                android:icon="@drawable/ic_performance"
                 android:title="@string/speed" />
             <item
                 android:id="@+id/nav_volume"
+                android:icon="@drawable/ic_cube"
                 android:title="@string/Volume" />
             <item
                 android:id="@+id/nav_force"
+                android:icon="@drawable/ic_force"
                 android:title="@string/Force" />
             <item
                 android:id="@+id/nav_weight"
+                android:icon="@drawable/ic_balance"
                 android:title="@string/Weight" />
             <item
                 android:id="@+id/nav_power"
+                android:icon="@drawable/ic_green_energy"
                 android:title="@string/Power" />
             <item
                 android:id="@+id/nav_pressure"
+                android:icon="@drawable/ic_gauge"
                 android:title="Pressure" />
             <item
                 android:id="@+id/nav_energy"
+                android:icon="@drawable/ic_renewable_energy"
                 android:title="@string/Energy" />
             <item
                 android:id="@+id/nav_angle"
+                android:icon="@drawable/ic_angle"
                 android:title="@string/Angle" />
 
         </menu>
@@ -58,11 +73,12 @@
         <menu>
             <item
                 android:id="@+id/nav_area"
+                android:icon="@drawable/ic_area"
                 android:title="@string/Area" />
             <item
                 android:id="@+id/nav_geovolume"
+                android:icon="@drawable/ic_cylinder_volumetric_shape"
                 android:title="@string/Volume" />
         </menu>
     </item>
-
 </menu>

@@ -51,6 +51,7 @@ public class VolumeActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
         simpleList = findViewById(R.id.volumeListView);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.listview, R.id.textView, geometry);
         simpleList.setAdapter(arrayAdapter);

@@ -61,6 +61,7 @@ public class WeightActivty extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
         uisetup();
 
 

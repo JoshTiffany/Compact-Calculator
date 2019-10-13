@@ -61,6 +61,7 @@ public class AngleActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
         uisetup();
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.angle1, android.R.layout.simple_spinner_item);
