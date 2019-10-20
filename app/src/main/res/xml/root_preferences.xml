@@ -14,13 +14,15 @@
   ~ limitations under the License.
   -->
 
-<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory app:title="General">
 
         <Preference
             app:key="theme"
             app:summary="Change the Theme"
+            android:icon="@drawable/ic_paintbrush"
             app:title="Theme">
 
         </Preference>
@@ -33,16 +35,19 @@
         <Preference
             app:key="rate"
             app:title="Rate This App"
+            android:icon="@drawable/ic_star"
             app:summary="Support the App" />
 
         <Preference
             app:key="share"
             app:title="Share"
+            android:icon="@drawable/ic_email"
             app:summary="Share the App" />
 
         <Preference
             app:key="contact"
             app:title="Contact"
+            android:icon="@drawable/ic_network"
             app:summary="Contact me help, issues, feedback or new features you want added" />
 
 
@@ -52,10 +57,12 @@
 
         <Preference
             app:key="credits"
+            android:icon="@drawable/ic_diploma"
             app:title="Credits" />
 
         <Preference
             app:key="version"
+            android:icon="@drawable/ic_written_conversation_speech_bubble_with_letter_i_inside_of_information_for_interface"
             app:title="Version"
             app:summary="1.0" />
 
