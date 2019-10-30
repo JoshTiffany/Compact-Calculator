@@ -44,6 +44,7 @@
             <item
                 android:id="@+id/nav_force"
                 android:icon="@drawable/ic_force"
+                android:textColor="#9400D3"
                 android:title="@string/Force" />
             <item
                 android:id="@+id/nav_weight"

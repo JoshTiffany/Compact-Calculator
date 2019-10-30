@@ -24,6 +24,7 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_thermometer"
+                android:textColor="#9400D3"
                 android:title="@string/Temperature" />
             <item
                 android:id="@+id/nav_send"

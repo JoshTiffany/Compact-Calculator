@@ -40,6 +40,7 @@
             <item
                 android:id="@+id/nav_volume"
                 android:icon="@drawable/ic_cube"
+                android:textColor="#9400D3"
                 android:title="@string/Volume" />
             <item
                 android:id="@+id/nav_force"

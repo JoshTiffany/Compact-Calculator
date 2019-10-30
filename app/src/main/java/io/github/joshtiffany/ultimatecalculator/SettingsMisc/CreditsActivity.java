@@ -12,7 +12,7 @@ import io.github.joshtiffany.ultimatecalculator.R;
 
 public class CreditsActivity extends AppCompatActivity {
 
-    Button javax;
+    Button javax, flat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +28,19 @@ public class CreditsActivity extends AppCompatActivity {
             }
         });
 
+        flat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.flaticon.com/"));
+                startActivity(browserIntent);
+            }
+        });
+
     }
 
     public void uisetup() {
         javax = findViewById(R.id.javaXBTN);
+        flat = findViewById(R.id.flaticonBTN);
     }
 
 }

@@ -78,6 +78,7 @@
             <item
                 android:id="@+id/nav_geovolume"
                 android:icon="@drawable/ic_cylinder_volumetric_shape"
+                android:textColor="#9400D3"
                 android:title="@string/Volume" />
         </menu>
     </item>

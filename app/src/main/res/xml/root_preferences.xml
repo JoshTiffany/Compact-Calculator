@@ -58,6 +58,7 @@
         <Preference
             app:key="credits"
             android:icon="@drawable/ic_diploma"
+            app:summary="Where I got my libraries and Icons from"
             app:title="Credits" />
 
         <Preference

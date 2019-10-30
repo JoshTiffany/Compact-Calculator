@@ -56,6 +56,7 @@
             <item
                 android:id="@+id/nav_pressure"
                 android:icon="@drawable/ic_gauge"
+                android:textColor="#9400D3"
                 android:title="Pressure" />
             <item
                 android:id="@+id/nav_energy"

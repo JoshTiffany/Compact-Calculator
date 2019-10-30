@@ -32,6 +32,7 @@
             <item
                 android:id="@+id/nav_time"
                 android:icon="@drawable/ic_hourglass"
+                android:textColor="#9400D3"
                 android:title="@string/Time" />
             <item
                 android:id="@+id/nav_speed"
