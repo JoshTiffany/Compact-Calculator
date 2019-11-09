@@ -10,18 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SettingsMisc.CreditsActivity"
-            android:label="Credits"
+            android:name=".SettingsMisc.ThemesActivity"
             android:configChanges="orientation"
+            android:label="Themes"
+            android:parentActivityName=".SettingsMisc.SettingsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SettingsMisc.CreditsActivity"
+            android:configChanges="orientation"
+            android:label="Credits"
             android:parentActivityName=".SettingsMisc.SettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".SettingsMisc.SettingsActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".Calculators.MainActivity" /> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+            android:parentActivityName=".Calculators.MainActivity"
+            android:screenOrientation="portrait" /> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />

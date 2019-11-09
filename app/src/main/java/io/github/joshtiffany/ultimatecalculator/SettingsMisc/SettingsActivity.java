@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
-import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -51,7 +50,7 @@ public class SettingsActivity extends AppCompatActivity {
             theme.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    Intent startintent = new Intent(getActivity(), MainActivity.class);
+                    Intent startintent = new Intent(getActivity(), ThemesActivity.class);
                     startActivity(startintent);
                     return false;
                 }

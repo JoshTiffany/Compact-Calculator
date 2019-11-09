@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- the theme applied to the application or activity -->
+    <style name="CustomActionBarTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/DefaultTheme.</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="DefaultTheme." parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#450E6A</item>
+        <item name="android:textAppearance">@color/side_nav_text_color</item>
+    </style>
+
+    <style name="PinkTheme." parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#D31DBD</item>
+        <item name="android:textAppearance">@color/side_nav_text_color</item>
+    </style>
+
+    <style name="BlueTheme." parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#0E3A98</item>
+        <item name="android:textAppearance">@color/side_nav_text_color</item>
+    </style>
+
+    <style name="GreenTheme." parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#25930F</item>
+        <item name="android:textAppearance">@color/side_nav_text_color</item>
+    </style>
+
+    <style name="YellowTheme." parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#E3DD11</item>
+        <item name="android:textAppearance">@color/side_nav_text_color</item>
+    </style>
+
+    <style name="OrangeTheme." parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#C28408</item>
+        <item name="android:textAppearance">@color/side_nav_text_color</item>
+    </style>
+
+    <style name="BlackTheme." parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#000000</item>
+        <item name="android:textAppearance">@color/side_nav_text_color</item>
+
+    </style>
+</resources>
