@@ -14,41 +14,29 @@
   ~ limitations under the License.
   -->
 
-<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="General">
-
-        <Preference
-            app:key="theme"
-            app:summary="Change the Theme"
-            android:icon="@drawable/ic_paintbrush"
-            app:title="Theme">
-
-        </Preference>
-
-
-    </PreferenceCategory>
 
     <PreferenceCategory app:title="Social">
 
         <Preference
-            app:key="rate"
-            app:title="Rate This App"
             android:icon="@drawable/ic_star"
-            app:summary="Support the App" />
+            app:key="rate"
+            app:summary="Support the App"
+            app:title="Rate This App" />
 
         <Preference
-            app:key="share"
-            app:title="Share"
             android:icon="@drawable/ic_email"
-            app:summary="Share the App" />
+            app:key="share"
+            app:summary="Share the App"
+            app:title="Share" />
 
         <Preference
-            app:key="contact"
-            app:title="Contact"
             android:icon="@drawable/ic_network"
-            app:summary="Contact me help, issues, feedback or new features you want added" />
+            app:key="contact"
+            app:summary="Contact me help, issues, feedback or new features you want added"
+            app:title="Contact" />
 
 
     </PreferenceCategory>
@@ -56,16 +44,16 @@
     <PreferenceCategory app:title="Other">
 
         <Preference
-            app:key="credits"
             android:icon="@drawable/ic_diploma"
+            app:key="credits"
             app:summary="Where I got my libraries and Icons from"
             app:title="Credits" />
 
         <Preference
-            app:key="version"
             android:icon="@drawable/ic_written_conversation_speech_bubble_with_letter_i_inside_of_information_for_interface"
-            app:title="Version"
-            app:summary="1.0" />
+            app:key="version"
+            app:summary="1.0"
+            app:title="Version" />
 
     </PreferenceCategory>
 

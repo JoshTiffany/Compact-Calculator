@@ -10,12 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
-import io.github.joshtiffany.ultimatecalculator.Calculators.MainActivity;
 import io.github.joshtiffany.ultimatecalculator.R;
 
 public class SettingsActivity extends AppCompatActivity {
-
-    String gpn = getPackageName();
 
 
     @Override
@@ -41,21 +38,12 @@ public class SettingsActivity extends AppCompatActivity {
             setPreferencesFromResource(R.xml.root_preferences, rootKey);
 
 
-            Preference theme = findPreference("theme");
             Preference rate = findPreference("rate");
             Preference share = findPreference("share");
             Preference contact = findPreference("contact");
             Preference credits = findPreference("credits");
             Preference version = findPreference("version");
 
-            theme.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                @Override
-                public boolean onPreferenceClick(Preference preference) {
-                    Intent startintent = new Intent(getActivity(), MainActivity.class);
-                    startActivity(startintent);
-                    return false;
-                }
-            });
 
             rate.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
