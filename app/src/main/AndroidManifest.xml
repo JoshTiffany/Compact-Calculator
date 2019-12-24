@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.RectangPrismAreaActivity"
+            android:configChanges="orientation"
+            android:label="Rectangular Prism"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Geometry.CubeAreaActivity"
             android:configChanges="orientation"
             android:label="Cube"
