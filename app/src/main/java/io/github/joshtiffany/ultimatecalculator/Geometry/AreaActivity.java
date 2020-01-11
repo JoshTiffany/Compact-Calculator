@@ -37,7 +37,7 @@ public class AreaActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ListView simpleList;
-    String[] geometry = {"Triangle", "Square", "Rectangle", "Parallelogram", "Trapezoid", "Rhombus", "Pentagon", "Hexagon", "Circle", "circle arc", "Ellipse", "Cube", "Rectangular Prism", "Square Pyramid"};
+    String[] geometry = {"Triangle", "Square", "Rectangle", "Parallelogram", "Trapezoid", "Rhombus", "Pentagon", "Hexagon", "Circle", "circle arc", "Ellipse", "Cube", "Rectangular Prism", "Square Pyramid", "Square Pyramid Frustum"};
 
 
     @Override
@@ -102,6 +102,9 @@ public class AreaActivity extends AppCompatActivity
                     startActivity(intent);
                 } else if (position == 13) {
                     Intent intent = new Intent(getApplicationContext(), SquarePyramidAreaActivity.class);
+                    startActivity(intent);
+                } else if (position == 14) {
+                    Intent intent = new Intent(getApplicationContext(), SquarePyrFrustumAreaActivity.class);
                     startActivity(intent);
                 }
             }

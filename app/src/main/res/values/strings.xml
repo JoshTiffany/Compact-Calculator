@@ -318,4 +318,5 @@
     <string name="title_activity_cube_area">CubeAreaActivity</string>
     <string name="title_activity_rectang_prism_area">RectangPrismAreaActivity</string>
     <string name="title_activity_square_pyramid_area">SquarePyramidAreaActivity</string>
+    <string name="title_activity_square_pyr_frustum_area">SquarePyrFrustumAreaActivity</string>
 </resources>

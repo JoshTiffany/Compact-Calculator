@@ -12,9 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.SquarePyrFrustumAreaActivity"
+            android:configChanges="orientation"
+            android:label="Square Pyramid Frustum"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Geometry.SquarePyramidAreaActivity"
-            android:label="@string/title_activity_square_pyramid_area"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="Square Pyramid"
+            android:configChanges="orientation"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Geometry.RectangPrismAreaActivity"
             android:configChanges="orientation"
