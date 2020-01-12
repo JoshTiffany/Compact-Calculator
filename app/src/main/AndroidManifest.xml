@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.CylinderAreaActivity"
+            android:configChanges="orientation"
+            android:label="Cylinder"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Geometry.SquarePyrFrustumAreaActivity"
             android:configChanges="orientation"
             android:label="Square Pyramid Frustum"
@@ -20,8 +27,8 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Geometry.SquarePyramidAreaActivity"
-            android:label="Square Pyramid"
             android:configChanges="orientation"
+            android:label="Square Pyramid"
             android:parentActivityName=".Geometry.AreaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
