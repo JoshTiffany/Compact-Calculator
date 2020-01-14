@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.ConeAreaActivity"
+            android:configChanges="orientation"
+            android:label="Cone"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Geometry.CylinderAreaActivity"
             android:configChanges="orientation"
             android:label="Cylinder"
