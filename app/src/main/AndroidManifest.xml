@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.SphericalCapAreaActivity"
+            android:configChanges="orientation"
+            android:label="Spherical Cap"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Geometry.SphereAreaActivty"
             android:configChanges="orientation"
             android:label="Sphere"
