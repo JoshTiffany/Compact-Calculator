@@ -322,4 +322,5 @@
     <string name="title_activity_cylinder_area">CylinderAreaActivity</string>
     <string name="title_activity_cone_area">ConeAreaActivity</string>
     <string name="title_activity_conical_frustum_area">ConicalFrustumAreaActivity</string>
+    <string name="title_activity_sphere_area_activty">SphereAreaActivty</string>
 </resources>

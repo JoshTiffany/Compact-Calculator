@@ -39,7 +39,8 @@ public class AreaActivity extends AppCompatActivity
     ListView simpleList;
     String[] geometry = {"Triangle", "Square", "Rectangle", "Parallelogram", "Trapezoid", "Rhombus",
             "Pentagon", "Hexagon", "Circle", "Circle arc", "Ellipse", "Cube", "Rectangular Prism",
-            "Square Pyramid", "Square Pyramid Frustum", "Cylinder", "Cone", "Conical Frustum"};
+            "Square Pyramid", "Square Pyramid Frustum", "Cylinder", "Cone", "Conical Frustum",
+            "Sphere"};
 
 
     @Override
@@ -116,6 +117,9 @@ public class AreaActivity extends AppCompatActivity
                     startActivity(intent);
                 } else if (position == 17) {
                     Intent intent = new Intent(getApplicationContext(), ConicalFrustumAreaActivity.class);
+                    startActivity(intent);
+                } else if (position == 18) {
+                    Intent intent = new Intent(getApplicationContext(), SphereAreaActivty.class);
                     startActivity(intent);
                 }
             }
