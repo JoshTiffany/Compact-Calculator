@@ -324,4 +324,6 @@
     <string name="title_activity_conical_frustum_area">ConicalFrustumAreaActivity</string>
     <string name="title_activity_sphere_area_activty">SphereAreaActivty</string>
     <string name="title_activity_spherical_cap_area">SphericalCapAreaActivity</string>
+    <string name="title_activity_spherical_segment_area">SphericalSegmentAreaActivity</string>
+    <string name="title_activity_ellipsoid_area">EllipsoidAreaActivity</string>
 </resources>

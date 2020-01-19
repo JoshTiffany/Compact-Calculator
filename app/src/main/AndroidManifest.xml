@@ -12,6 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Geometry.EllipsoidAreaActivity"
+            android:configChanges="orientation"
+            android:label="Ellipsoid"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Geometry.SphericalSegmentAreaActivity"
+            android:configChanges="orientation"
+            android:label="Spherical Segment"
+            android:parentActivityName=".Geometry.AreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Geometry.SphericalCapAreaActivity"
             android:configChanges="orientation"
             android:label="Spherical Cap"

@@ -40,7 +40,7 @@ public class AreaActivity extends AppCompatActivity
     String[] geometry = {"Triangle", "Square", "Rectangle", "Parallelogram", "Trapezoid", "Rhombus",
             "Pentagon", "Hexagon", "Circle", "Circle arc", "Ellipse", "Cube", "Rectangular Prism",
             "Square Pyramid", "Square Pyramid Frustum", "Cylinder", "Cone", "Conical Frustum",
-            "Sphere", "Spherical Cap"};
+            "Sphere", "Spherical Cap", "Ellipsoid"};
 
 
     @Override
@@ -123,6 +123,9 @@ public class AreaActivity extends AppCompatActivity
                     startActivity(intent);
                 } else if (position == 19) {
                     Intent intent = new Intent(getApplicationContext(), SphericalCapAreaActivity.class);
+                    startActivity(intent);
+                } else if (position == 20) {
+                    Intent intent = new Intent(getApplicationContext(), EllipsoidAreaActivity.class);
                     startActivity(intent);
                 }
             }
